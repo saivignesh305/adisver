@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adisver - Technological Innovation through AI/ML & IoT</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        .tech-detail {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-detail li {
+            color: white;
+        }
+
+        .tech-detail li:not(:last-child)::after {
+            content: "/";
+            margin-left: 8px;
+            margin-right: 8px;
+            color: white;
+        }
+
+        .tech-detail a {
+            color: white;
+            text-decoration: none;
+        }
+
+        
+        /**** ai Section ****/
+        .ai {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+
+        .ai-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .ai-text {
+            flex: 1;
+        }
+
+        .ai-text h4 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .ai-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .ai-image {
+            flex: 1;
+            border: none;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .ai-image img {
+            width: 100%;
+            border: none;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .ai-image img:hover {
+            transform: scale(1.02);
+        }
+
+
+        /**** cognitive ****/
+
+        .cognitive {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .cognitive-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 100px;
+        }
+
+        .cognitive-text {
+            flex: 1;
+        }
+
+        .cognitive-text h4 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .cognitive-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .cognitive-image {
+            flex: 1;
+            border: none;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .cognitive-image img {
+            width: 100%;
+            border: none;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .cognitive-image img:hover {
+            transform: scale(1.02);
+        }
+
+        /**** machine learing ****/
+
+        .ml {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+
+        .ml-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 100px;
+        }
+
+        .ml-text {
+            flex: 1;
+        }
+
+        .ml-text h4 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .ml-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .ml-image {
+            flex: 1;
+            border: none;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .ml-image img {
+            width: 100%;
+            border: none;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .ml-image img:hover {
+            transform: scale(1.02);
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                
+                <h1>Adis<span>ver</span></h1>
+            </div>
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Our Technology</h2>
+                    <ol class="tech-detail">
+                        <li><a href="#ai">Artificial Intelligence</a></li>
+                        <li><a href="#cognitive">Cognitive</a></li>
+                        <li><a href="#ml">Machine Learning</a></li>
+                    </ol>
+                    <div class="hero-buttons">
+                        <a href="#technology" class="exp">Read more</a>
+                        <a href="#contact" class="btn btn-outline">Contact Us</a>
+                    </div>
+                </div>
+                <div class="slider-container">
+                    <div class="slider">
+                        <img src="img/ai_ml_cog.png" alt="AI/ML">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero End -->
+
+    <!-- Technology Section -->
+    <section class="technology" id="technology">
+        <div class="container">
+            <div class="section-title">
+                <h3>Our Technology Stack</h3>
+                <p>Powering our innovations with cutting-edge technologies</p>
+            </div>
+            <div class="tech-cards">
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <img width="70px" src="img/microchip.png" alt="">
+                    </div>
+                    <h4>Artificial Intelligence</h4>
+                    <p>Advanced AI algorithms enable our products to learn patterns, predict outcomes, and provide personalized insights.</p>
+                </div>
+                <div class="tech-card-middle">
+                    <div class="tech-icon">
+                        <img width="70px" src="img/cog icon.png" alt="">                        
+                    </div>
+                    <h4>Cognitive</h4>
+                    <p>Seamless connectivity between devices ensures real-time data transfer and synchronized healthcare monitoring.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <img width="70px" src="img/ml icon.png" alt="">
+                    </div>
+                    <h4>Machine Learning</h4>
+                    <p>Our ML models continuously improve over time, adapting to individual needs and providing increasingly accurate analyses.</p>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <!--AI section-->
+
+    <section class="ai" id="ai">
+        <div class="container">
+            <div class="ai-content">
+                <div class="ai-text">
+                    <div class="section-title">
+                        <h3>Artificial Intelligence</h3>
+                    </div>
+                    <h4></h4>
+                    <p>At Adisver, we envision a world where technology empowers smarter, faster, and more personalized
+                        solutions across industries. We are committed to developing cutting-edge innovations that
+                        seamlessly integrate with real-world needs—bridging the gap between advanced technology and
+                        essential services. Whether in healthcare, agriculture, or beyond, our mission is to drive
+                        meaningful impact through intelligent, adaptable, and accessible tech solutions.</p>
+                </div>
+
+                <div class="ai-image">
+                    <img src="img/ai.png" alt="Adisver team working on healthcare innovations">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  AI End -->
+
+    <!-- cognitive section -->
+    <section class="cognitive" id="cognitive">
+        <div class="container">
+            <div class="cognitive-content">
+                <div class="cognitive-image">
+                    <img src="img/microprocessor-with-brain.jpg" alt="Adisver team working on healthcare innovations">
+                </div>
+                <div class="cognitive-text">
+                    <div class="section-title">
+                        <h3>Cognitive</h3>
+                    </div>
+                    <h4></h4>
+                    <p>At Adisver, we harness the power of cutting-edge technologies including artificial intelligence,
+                        machine learning, and the Internet of Things to develop intelligent solutions that solve
+                        real-world problems across diverse sectors.</p>
+                    <p>Our multidisciplinary team—comprising engineers, data scientists, product designers, and domain
+                        experts—collaborates to build innovative, user-centric products that are both scalable and
+                        accessible.</p>
+                    <p>We believe technology should empower people, drive smarter decisions, and create meaningful
+                        impact through practical, data-driven solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Cognitive end -->
+
+
+    <!--ml section-->
+    <section class="ml" id="ml">
+        <div class="container">
+            <div class="ml-content">
+                <div class="ml-text">
+                    <div class="section-title">
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <h4></h4>
+                    <p>At Adisver, we envision a world where technology empowers smarter, faster, and more personalized
+                        solutions across industries. We are committed to developing cutting-edge innovations that
+                        seamlessly integrate with real-world needs—bridging the gap between advanced technology and
+                        essential services. Whether in healthcare, agriculture, or beyond, our mission is to drive
+                        meaningful impact through intelligent, adaptable, and accessible tech solutions.</p>
+                </div>
+
+                <div class="ml-image">
+                    <img src="img/machine_le.png" alt="Adisver team working on ml">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  ml End -->
+
+
+    <!-- team member -->
+    <!--
+    <section class="team" id="team">
+        <div class="container-team">
+            <div class="section-title">
+                <h3>Meet Our Experienced Team Members</h3>
+            </div>
+            <div class="team-cards">
+                <div class="team-card">
+                    <img src="img/purvi.webp" alt="Purvi Roy">
+                    <h5>Purvi Roy</h5>
+                    <small>Founder & CEO</small>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="img/Atul.jpg" alt="Atul Gupta">
+                    <h5>Atul Gupta</h5>
+                    <small>Co-Founder & CFO</small>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="img/Akhilesh.webp" alt="Akhilesh Yadav">
+                    <h5>Akhilesh Yadav</h5>
+                    <small>CTO</small>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Team End -->
+
+    <!-- contact us -->
+    <div class="contact" id="contact">
+        <div class="container con">
+            <div class="row">
+                <div class="contact-image">
+                    <img src="img/newsletter.png" alt="Contact Us Image">
+                </div>
+                <div class="contact-text">
+                    <h1>Contact Us</h1>
+                    <small class="note">Interested in our solutions? We'd love to hear from you!</small>
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+                            <div class="form-group mb-3">
+                                <textarea class="form-control" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="message">Send Message</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact End -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        
+                        <h3>Adis<span>ver</span></h3>
+                    </div>
+                    <p>Transforming healthcare through intelligent innovation, one solution at a time.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Innovation Way, Tech Park, Delhi, India</p>
+                    <p><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@adisver.com</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates on products and innovations.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                        <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adisver. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

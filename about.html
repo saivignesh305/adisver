@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adisver - Technological Innovation through AI/ML & IoT</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        
+        /**** story ****/
+
+        .story {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .story-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 100px;
+        }
+
+        .story-text {
+            flex: 1;
+        }
+
+        .story-text h4 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .story-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .story-image {
+            flex: 1;
+            border: none;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .story-image img {
+            width: 100%;
+            border: none;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .story-image img:hover {
+            transform: scale(1.02);
+        }
+
+
+        /*** core group ***/
+
+        .container-core {
+            background-color: var(--light);
+            margin: auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .core-cards {
+            display: flex;
+            padding: 0 50px 50px 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .core-card {
+            flex: 1;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .core-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .core-card img {
+            height: 100px;
+            object-fit: cover;
+            padding: 10px;
+        }
+
+        .core-card h5 {
+            margin: 15px 0 5px;
+            font-size: 20px;
+        }
+
+
+        /** vision **/
+
+        .vision {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .vision-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 100px;
+        }
+
+        .vision-text {
+            flex: 1;
+        }
+
+        .vision-text h4 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .vision-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .vision-image {
+            position: relative;
+            flex: 1;
+            overflow: hidden; /* Optional: hides overflow if needed */
+        }
+
+        .vision-image::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url(img/bg-about-img.png) top left no-repeat;
+            background-size: contain;
+            pointer-events: none; /* Allows clicking through the overlay */
+            z-index: 1;
+        }
+
+        .vision-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: relative;
+            z-index: 0;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h1>Adis<span>ver</span></h1>
+            </div>
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="contact_us.html">Contact Us &nbsp;<i class="fas fa-map-marker-alt contact-icon"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>About Adis<span style="color: #66cc00;">ver</span></h2>
+                    <p>At Adisver, we are pioneers in <b>Artificial Design Intelligence</b> (ADI) — a next-generation
+                        fusion of AI, cognitive computing, and design thinking.</p>
+                    <!-- <div class="hero-buttons">
+                        <a href="#technology" class="exp">Read more</a>
+                        <a href="#contact" class="btn btn-outline">Contact Us</a>
+                    </div> -->
+                </div>
+                <div class="image-container">
+                    <img src="img/aboutus.png" height="400px" alt="AI/ML">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero End -->
+
+
+    <!--About section-->
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/adi.png" alt="Adisver team working on healthcare innovations">
+                </div>
+                <div class="about-text">
+                    <div class="section-title">
+                        <h3>Adisver</h3>
+                    </div>
+                    <h4></h4>
+                    <p>We are a future-focused tech company pioneering <b>Artificial Design Intelligence (ADI) </b>, AI,
+                        and Cognitive Technologies. Adisver exists to revolutionize how industries like agriculture and
+                        healthcare solve complex problems.</p>
+                    <p>Our ADI-driven systems are engineered to learn, evolve, and respond in real-time, delivering
+                        precision, efficiency, and long-term impact. Whether it's building smart medical devices or
+                        intelligent agri-solutions, every innovation we create is born from ADI. We don't follow
+                        trends—we set them. At Adisver, we're not just imagining the future. We're designing it.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  About End -->
+
+
+    <!-- story section -->
+    <section class="story" id="story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <div class="section-title">
+                        <h3>Our Story</h3>
+                    </div>
+                    <h4></h4>
+                    <p>Adisver was born from a simple question: What if machines could not only think but design,
+                        adapt, and innovate like humans? This idea became the spark that ignited our journey into
+                        Artificial Design Intelligence (ADI)—a new frontier where intelligence meets creativity and
+                        transforms industries.</p>
+                    <p>In our early days, we worked from a small room with a big dream—to build technologies that
+                        would matter. We weren't just coding systems; we were crafting solutions with empathy and
+                        foresight. From smart agri-tools that respond to changing environments to AI-driven medical
+                        innovations that save lives, every step we took brought us closer to reshaping the future.</p>
+                    <p>Today, Adisver stands as a symbol of purpose-driven innovation, blending the power of ADI,
+                        AI, and cognitive tech to solve the world's most pressing challenges. But for us, this is just the
+                        beginning.
+                        We're not here to adapt to the future—we're here to design it.
+                    </p>
+                </div>
+                <div class="story-image">
+                    <img src="img/brain.png" alt="Adisver team working on healthcare innovations">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- story end -->
+
+
+    <!-- core section -->
+
+    <section class="core" id="core">
+        <div class="container-core">
+            <div class="section-title">
+                <h3>Our Core Values</h3>
+            </div>
+            <div class="core-cards">
+                <div class="core-card">
+                    <img src="img/idea.png" alt="">
+                    <h5>Innovation</h5>
+                    <p>We constantly push the boundaries of what's possible in healthcare technology, seeking
+                        creative solutions to complex problems.</p>
+                </div>
+                <div class="core-card">
+                    <img src="img/precision.png" alt="">
+                    <h5>Precision</h5>
+                    <p>Our solutions are built with meticulous attention to detail, ensuring accuracy and
+                        reliability in critical healthcare scenarios.</p>
+                </div>
+                <div class="core-card">
+                    <img src="img/compassion.png" alt="">
+                    <h5>Compassion</h5>
+                    <p>We develop technology with empathy for patients and healthcare providers, focusing on
+                        improving lives and experiences.</p>
+                </div>
+                <div class="core-card">
+                    <img src="img/collaboration.png" alt="">
+                    <h5>Collaboration</h5>
+                    <p>We work closely with healthcare experts and institutions to ensure our solutions address
+                        real-world needs effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- core End -->
+
+    
+    <!-- vision section -->
+
+    <section class="vision" id="vision">
+        <div class="container">
+            <div class="vision-content">
+                <div class="vision-image">
+                    <img src="img/mach_learn.jpg" alt="Adisver team working on healthcare innovations">
+                </div>
+                <div class="vision-text">
+                    <div class="section-title">
+                        <h3>Our Mission</h3>
+                    </div>
+                    <p>To engineer intelligent, design-driven technologies that solve real-world challenges and
+                        empower industries to thrive in a future built on purpose and innovation.</p>
+                    <br>
+                    <div class="section-title">
+                        <h3>Our Vision</h3>
+                    </div>
+                    <p>To become the global leader in Artificial Design Intelligence, creating intelligent systems that
+                        transform the way the world works, heals, and grows.</p>
+                </div>                
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- vision End -->
+
+    <!-- contact us -->
+    <div class="contact" id="contact">
+        <div class="container con">
+            <div class="row">
+                <div class="contact-image">
+                    <img src="img/newsletter.png" alt="Contact Us Image">
+                </div>
+                <div class="contact-text">
+                    <h1>Contact Us</h1>
+                    <small class="note">Interested in our solutions? We'd love to hear from you!</small>
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+                            <div class="form-group mb-3">
+                                <textarea class="form-control" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="message">Send Message</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact End -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="footer-logo-img">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Adis<span>ver</span></h3>
+                    </div>
+                    <p>Transforming healthcare through intelligent innovation, one solution at a time.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Innovation Way, Tech Park, Delhi, India</p>
+                    <p><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@adisver.com</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates on products and innovations.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                        <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adisver. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

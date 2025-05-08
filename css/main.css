@@ -146,6 +146,9 @@ nav ul li a:hover:after {
 .hero-text h2 {
     line-height: 4rem;
 }
+.hero-text h3 {
+    line-height: 3rem;
+}
 
 .hero-image {
     flex: 1;
@@ -949,6 +952,9 @@ footer {
     }
 
     .hero h2 {
+        font-size: 36px;
+    }
+    .hero h3 {
         font-size: 36px;
     }
 

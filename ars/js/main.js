@@ -4,7 +4,7 @@ const navbar = document.querySelector('#navbar');
 const slider = document.querySelector('.slider');
 const images = document.querySelectorAll('.slider img');
 
-// Slider functionality
+
 let index = 0;
 
 setInterval(() => {
@@ -38,7 +38,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Highlight active nav item on scroll
+
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav ul li a');
@@ -98,13 +98,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     sendButton.disabled = false;
                     sendButton.textContent = 'Send Message';
                     formStatus.textContent = 'Your message has been sent successfully!';
-                    formStatus.style.color = '#66cc00'; // Success color (accent color)
+                    formStatus.style.color = '#66cc00'; 
                     contactForm.reset();
                 }, function(error) {
                     sendButton.disabled = false;
                     sendButton.textContent = 'Send Message';
                     formStatus.textContent = 'Error sending message. Please try again.';
-                    formStatus.style.color = '#f8d7da'; // Error color
+                    formStatus.style.color = '#f8d7da';
                     console.error('EmailJS error:', error);
                 });
         });

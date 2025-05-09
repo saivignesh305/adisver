@@ -1027,6 +1027,8 @@ footer {
     .technology,
     .contact {
         padding: 70px 0;
+        margin-left:10px;
+        margin-right: 10px;
     }
 
     .btn {
@@ -1379,5 +1381,22 @@ nav ul li a.active:after {
 @media (max-width: 991px) {
     .contact .container {
         padding: 0 15px;
+    }
+}
+@media (max-width: 991px) {
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .slider-container {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
 }

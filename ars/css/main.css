@@ -129,7 +129,7 @@ nav ul li a:hover:after {
     background-color: #0069a1;
     background-size: cover;
     color: var(--white);
-    padding: 150px 0 100px 0;
+    padding-top: 150px;
 }
 
 .hero-content {
@@ -143,7 +143,7 @@ nav ul li a:hover:after {
     padding-right: 40px;
 }
 
-.hero-text h2 {
+.hero-text h2,h5 {
     line-height: 4rem;
 }
 .hero-text h3 {
@@ -167,6 +167,11 @@ nav ul li a:hover:after {
 
 .hero h2 {
     font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.hero h5 {
+    font-size: 46px;
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -350,7 +355,6 @@ nav ul li a:hover:after {
     flex: 1;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     padding: 10px;
     background-color: var(--light);
 }
@@ -359,13 +363,8 @@ nav ul li a:hover:after {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
 }
 
-.about-image img:hover {
-    transform: scale(1.02);
-}
 
 
 /**** why choose****/

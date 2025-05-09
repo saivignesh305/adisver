@@ -18,7 +18,6 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            gap: 8px;
             flex-wrap: wrap;
             margin-bottom: 1.5rem;
         }
@@ -188,6 +187,127 @@
 
         .ml-image img:hover {
             transform: scale(1.02);
+        }
+         /* Mobile Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content, .tech-cards {
+                flex-direction: column;
+            }
+            
+            .hero-text, .slider-container {
+                text-align: center;
+                margin-bottom: 30px;
+                padding-top: 90px;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .tech-card, .tech-card-middle {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-nav-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 250px;
+                height: 100vh;
+                background-color: white;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                padding: 80px 20px 20px;
+                transition: right 0.3s;
+                z-index: 999;
+            }
+            
+            nav.active {
+                right: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0 0 20px 0;
+            }
+            
+            .ai-content, .cognitive-content, .ml-content {
+                flex-direction: column;
+            }
+            
+            .ai-text, .cognitive-text, .ml-text,
+            .ai-image, .cognitive-image, .ml-image {
+                width: 100%;
+                text-align: center;
+            }
+            
+            /* Reverse order for mobile */
+            .cognitive-content {
+                flex-direction: column-reverse;
+            }
+            
+            .section-title h3 {
+                font-size: 24px;
+            }
+            
+            .hero-text h2 {
+                font-size: 28px;
+            }
+            
+            .ai-text h4, .cognitive-text h4, .ml-text h4 {
+                font-size: 22px;
+            }
+            
+            /* Adjust spacing */
+            .ai, .cognitive, .ml, .technology, .contact {
+                padding: 40px 0;
+            }
+            
+            .footer-content > div {
+                flex: 100%;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 40px 0;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-buttons a {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .tech-card, .tech-card-middle {
+                min-width: auto;
+            }
+            
+            .contact-text h1 {
+                font-size: 26px;
+            }
+            
+            .form-control, .message {
+                padding: 10px;
+            }
+            
+            .footer-content {
+                gap: 20px;
+            }
         }
 
         

@@ -1087,11 +1087,12 @@ body {
     outline: none;
 }
 
-/* Improved Slider for Mobile */
+
 .slider-container {
     position: relative;
     width: 100%;
     overflow: hidden;
+
 }
 
 .slider {
@@ -1323,11 +1324,16 @@ body {
     
     /* Fix for slider on very small screens */
     .slider-container {
-        height: 180px; /* Fixed height for consistency */
+        height: 280px; /* Fixed height for consistency */
     }
     
     .slider img {
-        height: 180px;
+        height: 290px;
+        width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
     }
     
     /* Button sizes */

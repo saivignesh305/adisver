@@ -346,9 +346,8 @@
     </footer>
 
     <script>
-        // Countdown functionality
         const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 2); // 30 days from now
+        countdownDate.setDate(countdownDate.getDate() + 2); 
         
         function updateCountdown() {
             const now = new Date().getTime();
@@ -365,9 +364,9 @@
             document.getElementById("seconds").innerText = seconds;
         }
         
-        // Update countdown every second
+        
         setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call
+        updateCountdown(); 
     </script>
 </body>
 </html>

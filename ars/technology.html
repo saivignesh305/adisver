@@ -10,41 +10,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile-responsive.css">
 
     <style>
-
-        /** hero tech **/
-
-        .hero-tech {
-            background: url("./img/bg-hero.png") center center no-repeat;
-            background-color: #0069a1;
-            background-size: cover;
-            color: var(--white);
-            padding: 150px 0 160px 0;
-        }
-
-        .hero-tech-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .hero-tech-text {
-            flex: 1;
-            padding-right: 40px;
-        }
-
-        .hero-tech-text h2 {
-            line-height: 4rem;
-        }
-
-        .hero-tech h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-
         .tech-detail {
             display: flex;
             list-style: none;
@@ -69,12 +37,6 @@
         .tech-detail a {
             color: white;
             text-decoration: none;
-        }
-
-        .image-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
         }
 
         
@@ -248,17 +210,17 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="technology.html">Technology</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#contact">Contact Us &nbsp;<i class="fas fa-map-marker-alt contact-icon"></i></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-tech" id="home">
+    <section class="hero" id="home">
         <div class="container">
-            <div class="hero-tech-content">
-                <div class="hero-tech-text">
+            <div class="hero-content">
+                <div class="hero-text">
                     <h2>Our Technology</h2>
                     <ol class="tech-detail">
                         <li><a href="#ai">Artificial Intelligence</a></li>
@@ -270,8 +232,10 @@
                         <a href="#contact" class="btn btn-outline">Contact Us</a>
                     </div>
                 </div>
-                <div class="image-container">
-                    <img src="img/ai_ml_cog.png" height="400px" alt="AI/ML">
+                <div class="slider-container">
+                    <div class="slider">
+                        <img src="img/ai_ml_cog.png" alt="AI/ML">
+                    </div>
                 </div>
             </div>
         </div>
@@ -297,7 +261,7 @@
                     <div class="tech-icon">
                         <img width="70px" src="img/cog icon.png" alt="">                        
                     </div>
-                    <h4>Cognitive</h4>
+                    <h4>Cognitive Computing</h4>
                     <p>Seamless connectivity between devices ensures real-time data transfer and synchronized healthcare monitoring.</p>
                 </div>
                 <div class="tech-card">
@@ -343,11 +307,11 @@
                 </div>
                 <div class="cognitive-text">
                     <div class="section-title">
-                        <h3>Cognitive</h3>
+                        <h3>Cognitive Computing</h3>
                     </div>
                     <h4></h4>
-                    <p>Cognitive technology is where machines go beyond logic—they begin to understand, learn, and interact like humans.</p>
-                    <p>At Adiverse, cognitive systems are engineered to simulate human reasoning, making our solutions intuitive and responsive.</p>
+                    <p>Cognitive Computing technology is where machines go beyond logic—they begin to understand, learn, and interact like humans.</p>
+                    <p>At Adiverse,cognitive computing systems are engineered to simulate human reasoning, making our solutions intuitive and responsive.</p>
                     <p>Whether it's a wearable health monitor or an agri-advisor, our tools sense, process, and adapt in real-time. By blending cognition with AI, we build systems that not only think—but empathize and evolve.
 
                     </p>
@@ -477,7 +441,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#products">Products</a></li>
+                        <li><a href="index.html">Products</a></li>
                         <li><a href="technology.html">Technology</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>

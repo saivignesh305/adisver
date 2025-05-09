@@ -275,8 +275,9 @@ nav ul li a:hover:after {
 .slider img {
     width: 100%;
     height: auto;
-    max-height: 400px; 
+    max-height: 100%;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
@@ -1102,7 +1103,7 @@ body {
 .slider img {
     width: 100%;
     flex-shrink: 0;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Form Responsiveness */
@@ -1292,8 +1293,8 @@ body {
 @media (max-width: 576px) {
     /* Tighter spacing for very small screens */
     .container {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     
     .hero h2 {

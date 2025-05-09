@@ -275,7 +275,7 @@ nav ul li a:hover:after {
 .slider img {
     width: 100%;
     height: auto;
-    max-height: 800px; 
+    max-height: 400px; 
     object-fit: contain;
 }
 
@@ -1027,8 +1027,6 @@ footer {
     .technology,
     .contact {
         padding: 70px 0;
-        margin-left:10px;
-        margin-right: 10px;
     }
 
     .btn {
@@ -1294,8 +1292,8 @@ body {
 @media (max-width: 576px) {
     /* Tighter spacing for very small screens */
     .container {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     
     .hero h2 {
@@ -1381,22 +1379,5 @@ nav ul li a.active:after {
 @media (max-width: 991px) {
     .contact .container {
         padding: 0 15px;
-    }
-}
-@media (max-width: 991px) {
-    .hero-content {
-        flex-direction: column;
-    }
-    
-    .hero-text {
-        padding-right: 0;
-        margin-bottom: 30px;
-        text-align: center;
-    }
-    
-    .slider-container {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
     }
 }

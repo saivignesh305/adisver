@@ -27,6 +27,9 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+p{
+    text-align: justify;
+}
 
 /**** Header Styles ****/
 header {

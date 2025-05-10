@@ -130,7 +130,7 @@ nav ul li a:hover:after {
 }
 
 
-/**** Hero Section ****/
+
 .hero {
     background: url("../img/bg-hero.png") center center no-repeat;
     background-color: #0069a1;
@@ -144,6 +144,8 @@ nav ul li a:hover:after {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 70px;
 }
 
 .hero-text {
@@ -943,12 +945,12 @@ footer {
     .hero-image {
         text-align: center;
         padding: 15px;
-        /* Adjusted padding for mobile */
+        
     }
 
     .hero-image img {
         max-width: 85%;
-        /* Reduced size for mobile */
+        
     }
 
     .about-content {
@@ -1177,7 +1179,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Header & Navigation */
+    
     .header-container {
         padding: 10px 15px;
     }
@@ -1223,7 +1225,7 @@ body {
     
     /* Hero Section */
     .hero {
-        padding: 120px 0 60px;
+        padding: 120px 0 0px;
     }
     
     .hero h2 {

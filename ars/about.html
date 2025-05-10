@@ -9,7 +9,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
 
     <style>
         .image-container {
@@ -169,6 +169,67 @@
             display: block;
             position: relative;
             z-index: 0;
+        }
+        @media (max-width: 992px) {
+            .hero-content, .about-content, .story-content, .vision-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .hero-text, .about-text, .story-text, .vision-text,
+            .hero-image, .about-image, .story-image, .vision-image {
+                max-width: 100%;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .vision-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+
+            .contact-image {
+                order: -1;
+            }
+
+            .core-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            .footer-content > div {
+                flex: 1 1 100%;
+            }
+
+            .section-title h3 {
+                text-align: center;
+            }
+
+            .section-title h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-text h2 {
+                font-size: 28px;
+            }
+
+            .section-title h3 {
+                font-size: 22px;
+            }
+
+            .contact-text h1 {
+                font-size: 24px;
+            }
         }
 
         

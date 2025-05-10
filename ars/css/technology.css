@@ -1069,8 +1069,7 @@ body {
 
 .container {
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    
 }
 
 /* Enhanced Mobile Navigation */
@@ -1649,9 +1648,9 @@ body {
         font-size: 22px;
     }
     
-    /* Adjust spacing */
+    /* Adjust contact */
     .ai, .cognitive, .ml, .technology, .contact {
-        padding: 40px 0;
+        padding: 15px;
     }
     
     .footer-content > div {

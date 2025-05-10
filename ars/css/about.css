@@ -1069,8 +1069,7 @@ body {
 
 .container {
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    
 }
 
 /* Enhanced Mobile Navigation */
@@ -1255,7 +1254,7 @@ body {
     .products, 
     .technology, 
     .contact {
-        padding: 60px 0;
+        padding: 15px;
     }
     
     .section-title {

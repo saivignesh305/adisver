@@ -1244,9 +1244,7 @@ body {
     
     .hero-buttons {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        
     }
     
     .btn-outline {

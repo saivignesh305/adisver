@@ -136,7 +136,7 @@ nav ul li a:hover:after {
     background-color: #0069a1;
     background-size: cover;
     color: var(--white);
-    padding-top: 150px;
+    padding-top: 150px; 
     
 }
 

@@ -1240,9 +1240,7 @@ body {
     
     .hero-buttons {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        
     }
     
     .btn-outline {
@@ -1296,8 +1294,8 @@ body {
 @media (max-width: 576px) {
     /* Tighter spacing for very small screens */
     .container {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     
     .hero h2 {

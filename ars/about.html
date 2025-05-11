@@ -35,26 +35,39 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h2>About Adis<span style="color: #66cc00;">ver</span></h2>
-                    <p>At Adisver, we are pioneers in <b>Artificial Design Intelligence</b> (ADI) — a next-generation
-                        fusion of AI, cognitive computing, and design thinking.</p>
-                    <!-- <div class="hero-buttons">
-                        <a href="#technology" class="exp">Read more</a>
-                        <a href="#contact" class="btn btn-outline">Contact Us</a>
-                    </div> -->
+    <!-- contact us -->
+    <section class="contact" id="contact">
+        <div class="container con">
+            <div class="row">
+                <div class="contact-image">
+                    <img src="img/newsletter.png" alt="Contact Us Image" loading="lazy">
                 </div>
-                <div class="image-container">
-                    <img src="img/aboutus.png" height="400px" alt="AI/ML">
+                <div class="contact-text">
+                    <h1>Contact Us</h1>
+                    <small class="note">Interested in our solutions? We'd love to hear from you!</small>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group mb-3">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" name="subject" class="form-control" placeholder="Subject">
+                            </div>
+                            <div class="form-group mb-3">
+                                <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="message" id="sendButton">Send Message</button>
+                            <div id="formStatus" style="margin-top: 15px; font-weight: 500;"></div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Hero End -->
+    <!-- contact End -->
 
 
     <!--About section-->

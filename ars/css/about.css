@@ -1651,6 +1651,7 @@ nav ul li a.active:after {
         flex-direction: column;
         gap: 30px;
     }
+  
 
     .hero-text, .about-text, .story-text, .vision-text,
     .hero-image, .about-image, .story-image, .vision-image {

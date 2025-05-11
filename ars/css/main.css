@@ -19,6 +19,11 @@ body {
     background-color: var(--light);
     color: var(--dark);
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -27,8 +32,14 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-p{
+
+p {
     text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s;
 }
 
 /**** Header Styles ****/
@@ -73,9 +84,10 @@ header {
     color: var(--accent);
 }
 
-nav{
-    margin-right: 40px; 
+nav {
+    margin-right: 40px;
 }
+
 nav ul {
     display: flex;
     list-style: none;
@@ -87,11 +99,9 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
     color: var(--dark);
     font-weight: 500;
     font-size: 16px;
-    transition: color 0.3s;
     position: relative;
 }
 
@@ -110,8 +120,13 @@ nav ul li a:after {
     transition: width 0.3s;
 }
 
-nav ul li a:hover:after {
+nav ul li a:hover:after,
+nav ul li a.active:after {
     width: 100%;
+}
+
+nav ul li a.active {
+    color: var(--primary);
 }
 
 .mobile-nav-toggle {
@@ -125,9 +140,13 @@ nav ul li a:hover:after {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10;
+    z-index: 1001;
+    transition: all 0.3s ease;
 }
 
+.mobile-nav-toggle:focus {
+    outline: none;
+}
 
 /**** Hero Section ****/
 .hero {
@@ -135,8 +154,7 @@ nav ul li a:hover:after {
     background-color: #0069a1;
     background-size: cover;
     color: var(--white);
-    padding-top: 150px; 
-    
+    padding-top: 150px;
 }
 
 .hero-content {
@@ -148,14 +166,56 @@ nav ul li a:hover:after {
 .hero-text {
     flex: 1;
     padding-right: 40px;
-    
 }
 
-.hero-text h2,h5 {
+.hero-text h2,
+.hero-text h5 {
     line-height: 4rem;
 }
+
 .hero-text h3 {
     line-height: 3rem;
+}
+
+.hero h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero h5 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.slider-container {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    width: 100%;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .hero-image {
@@ -173,23 +233,8 @@ nav ul li a:hover:after {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.hero h2 {
-    font-size: 45px;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-.hero h5 {
-    font-size: 46px;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 20px;
-    margin-bottom: 40px;
-}
-
-.btn {
+/* Button Styles */
+.btn, .btn-read, .exp {
     display: inline-block;
     padding: 12px 30px;
     background-color: var(--accent);
@@ -201,51 +246,19 @@ nav ul li a:hover:after {
     transition: all 0.3s;
     border: none;
     cursor: pointer;
+}
+
+.btn:hover, .btn-read:hover, .exp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .exp {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--accent);
-    color: var(--white);
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
     font-size: 18px;
-    transition: all 0.3s;
-    border: none;
-    cursor: pointer;
-}
-
-.exp:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.btn-read {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--accent);
-    color: var(--white);
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s;
-    border: none;
-    cursor: pointer;
 }
 
 .btn-read:hover {
-    transform: translateY(-3px);
     background-color: #0066cc;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .btn-outline {
@@ -259,49 +272,17 @@ nav ul li a:hover:after {
     color: var(--primary);
 }
 
-/* slider */
-.slider-container {
-    flex: 1;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.slider {
-    display: flex;
-    gap: 10px;
-}
-
-.slider img {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-@media (max-width: 768px) {
-    .slider-container {
-        max-width: 100%;
-        height: 200px;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text {
-        padding-right: 0;
-        margin-bottom: 30px;
-    }
-}
-
-
-/**** About Section ****/
-.about {
+/**** Common Section Styles ****/
+.about, .products, .technology {
     padding: 100px 0;
+}
+
+.about, .products {
     background-color: var(--light);
+}
+
+.choose, .technology {
+    background-color: var(--white);
 }
 
 .section-title {
@@ -336,98 +317,53 @@ nav ul li a:hover:after {
     text-align: center;
 }
 
-.about-content {
+/**** About & Choose Section ****/
+.about-content, .choose-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 50px;
 }
 
-.about-text {
+.about-text, .choose-text {
     flex: 1;
 }
 
-.about-text h4 {
+.about-text h4, .choose-text h4 {
     font-size: 28px;
     margin-bottom: 20px;
     color: var(--dark);
 }
 
-.about-text p {
+.about-text p, .choose-text p {
     margin-bottom: 20px;
     color: var(--gray);
     font-size: 17px;
     line-height: 1.6;
+}
+
+.about-image, .choose-image {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 10px;
 }
 
 .about-image {
-    flex: 1;
-    border-radius: 15px;
-    overflow: hidden;
-    padding: 10px;
     background-color: var(--light);
 }
 
-.about-image img {
+.about-image img, .choose-image img {
     width: 100%;
     height: auto;
     display: block;
-}
-
-
-
-/**** why choose****/
-
-.choose {
-    padding: 100px 0;
-    background-color: var(--white);
-}
-
-.choose-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 100px;
-}
-
-.choose-text {
-    flex: 1;
-}
-
-.choose-text h4 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: var(--dark);
-}
-
-.choose-text p {
-    margin-bottom: 20px;
-    color: var(--gray);
-    font-size: 17px;
-    line-height: 1.6;
 }
 
 .choose-image {
-    flex: 1;
-    border-radius: 15px;
-    overflow: hidden;
-    padding: 10px;
     max-width: 550px;
 }
 
-.choose-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border: none;
-}
-
 /**** Products Section ****/
-.products {
-    padding: 100px 0;
-    background-color: var(--light);
-}
-
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -496,11 +432,6 @@ nav ul li a:hover:after {
 }
 
 /**** Technology Section ****/
-.technology {
-    padding: 100px 0;
-    background-color: var(--white);
-}
-
 .tech-cards {
     display: flex;
     justify-content: space-between;
@@ -510,7 +441,7 @@ nav ul li a:hover:after {
     flex-wrap: nowrap;
 }
 
-.tech-card {
+.tech-card, .tech-card-middle {
     flex: 1;
     padding: 30px;
     border-radius: 15px;
@@ -519,31 +450,17 @@ nav ul li a:hover:after {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.125);
     transition: all 0.3s;
 }
-.tech-card-middle{
+
+.tech-card-middle {
     flex: 1.2;
-    padding: 30px;
-    border-radius: 15px;
-    background-color: var(--light);
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.125);
-    transition: all 0.3s;
     min-height: 350px;
-    
 }
-.tech-card:hover,
-.tech-card-middle:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-
 
 .tech-card:hover,
 .tech-card-middle:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.297);
 }
-
 
 .tech-icon {
     width: 90px;
@@ -573,77 +490,7 @@ nav ul li a:hover:after {
     font-size: 16px;
 }
 
-
-/*** team group ***/
-/*
-.container-team {
-    background-color: var(--light);
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 20px;
-    text-align: center;
-}
-.team-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.team-card {
-    flex: 1;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    width: 280px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.team-card:hover {
-    transform: translateY(-5px);
-}
-
-.team-card img {
-    width: 150px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    padding: 10px;
-}
-
-.team-card h5 {
-    margin: 15px 0 5px;
-    font-size: 20px;
-}
-
-.team-card small {
-    color: #777;
-}
-
-.social-icons {
-    margin-top: 15px;
-}
-
-.social-icons a {
-    text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    margin: 0 5px;
-    padding: 10px;
-    border-radius: 40%;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.social-icons a:hover {
-    background-color: #01448b;
-}
-*/
-
-
-/**** contact us ****/
-
+/**** Contact Section ****/
 .contact {
     background: url("../img/bg-hero.png") center center no-repeat;
     background-color: #0069a1;
@@ -652,8 +499,6 @@ nav ul li a:hover:after {
     padding: 50px 0;
     color: white;
 }
-
-
 
 .row {
     display: flex;
@@ -676,7 +521,7 @@ nav ul li a:hover:after {
     display: block;
 }
 
-.contact-text h1{
+.contact-text h1 {
     color: white;
 }
 
@@ -747,30 +592,7 @@ textarea.form-control {
     padding: 0 !important;
 }
 
-@media (min-width: 992px) {
-    .contact .container {
-        max-width: 100%;
-    }
-
-    .contact .contact-text {
-        padding-right: calc(((100% - 960px) / 2) + 0.75rem);
-    }
-}
-
-@media (min-width: 1200px) {
-    .contact .contact-text {
-        padding-right: calc(((100% - 1140px) / 2) + 0.75rem);
-    }
-}
-
-@media (min-width: 1400px) {
-    .contact .contact-text {
-        padding-right: calc(((100% - 1320px) / 2) + 0.75rem);
-    }
-}
-
 /* Footer */
-
 footer {
     background: url(../img/footer.png) center center no-repeat;
     background-color: #0f1e2d;
@@ -899,11 +721,10 @@ footer {
     font-size: 14px;
     color: var(--dark);
 }
-.newsletter-input:focus{
+
+.newsletter-input:focus {
     outline: none;
     background: #d2cfcf;
-    
-
 }
 
 .newsletter-btn {
@@ -928,195 +749,7 @@ footer {
     font-size: 14px;
 }
 
-/* Responsive Styles */
-@media (max-width: 991px) {
-    .hero-content {
-        flex-direction: column;
-    }
-
-    .hero-text {
-        padding-right: 0;
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .hero-image {
-        text-align: center;
-        padding: 15px;
-        /* Adjusted padding for mobile */
-    }
-
-    .hero-image img {
-        max-width: 85%;
-        /* Reduced size for mobile */
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h2 {
-        font-size: 36px;
-    }
-    
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .product-image {
-        height: 240px;
-        /* Adjusted height for mobile */
-        padding: 10px 10px 0 10px;
-        /* Reduced padding for mobile */
-    }
-}
-
-@media (max-width: 768px) {
-    .header-container {
-        padding: 0;
-    }
-
-    .mobile-nav-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--white);
-        flex-direction: column;
-        padding: 20px 0;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 0;
-        padding: 10px 30px;
-        width: 100%;
-    }
-
-    .hero {
-        padding: 130px 0 70px;
-    }
-
-    .hero h2 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .section-title h3 {
-        font-size: 28px;
-    }
-
-    .about,
-    .choose,
-    .products,
-    .technology,
-    .contact {
-        padding: 70px 0;
-    }
-
-    .btn {
-        padding: 10px 25px;
-        font-size: 14px;
-    }
-
-    .hero-image img {
-        max-width: 95%;
-        padding: 0;
-    }
-
-    .product-image {
-        height: 220px;
-        padding: 8px 8px 0 8px;
-    }
-
-    .tech-icon {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 20px;
-    }
-}
-/* 
- * Mobile Responsive Enhancements for Adisver Website
- * This file should be included after the main.css file
- */
-
-/* Base Responsive Adjustments */
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-.container {
-    width: 100%;
-}
-
-/* Enhanced Mobile Navigation */
-.mobile-nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: var(--dark);
-    transition: all 0.3s ease;
-    z-index: 1001;
-}
-
-.mobile-nav-toggle:focus {
-    outline: none;
-}
-
-
-.slider-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-
-}
-
-.slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-}
-
-.slider img {
-    width: 100%;
-    flex-shrink: 0;
-    object-fit: contain;
-}
-
-/* Form Responsiveness */
-.form-control {
-    font-size: 16px; /* Prevent zoom on focus in iOS */
-}
-
-.message {
-    width: auto;
-    min-width: 160px;
-}
-
-/* Enhanced Responsive Breakpoints */
+/*mobile optim*/
 @media (max-width: 1199px) {
     .hero h2 {
         font-size: 42px;
@@ -1152,7 +785,7 @@ body {
     .choose-image, 
     .about-image {
         max-width: 100%;
-        order: -1; /* Move image above text on mobile */
+        order: -1;
     }
     
     .tech-cards {
@@ -1172,10 +805,36 @@ body {
     .section-title p {
         font-size: 16px;
     }
+    
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .contact .container {
+        max-width: 100%;
+    }
+
+    .contact .contact-text {
+        padding-right: calc(((100% - 960px) / 2) + 0.75rem);
+    }
+}
+
+@media (min-width: 1200px) {
+    .contact .contact-text {
+        padding-right: calc(((100% - 1140px) / 2) + 0.75rem);
+    }
+}
+
+@media (min-width: 1400px) {
+    .contact .contact-text {
+        padding-right: calc(((100% - 1320px) / 2) + 0.75rem);
+    }
 }
 
 @media (max-width: 768px) {
-    /* Header & Navigation */
+
     .header-container {
         padding: 10px 15px;
     }
@@ -1219,7 +878,7 @@ body {
         font-size: 18px;
     }
     
-    /* Hero Section */
+   
     .hero {
         padding: 120px 0 0px;
     }
@@ -1250,8 +909,15 @@ body {
     .btn-outline {
         margin-left: 0;
     }
+
+    .about, 
+    .choose, 
+    .products, 
+    .technology, 
+    .contact {
+        padding: 70px 0;
+    }
     
-    /* Sections Padding */
     .about, 
     .choose, 
     .products, 
@@ -1264,19 +930,34 @@ body {
         margin-bottom: 40px;
     }
     
-    /* Products */
     .products-grid {
         grid-template-columns: 1fr;
         gap: 25px;
     }
     
-    /* Contact Form */
+    .slider-container {
+        max-width: 100%;
+        height: 200px;
+    }
+    
+    
+    .product-image {
+        height: 220px;
+        padding: 8px 8px 0 8px;
+    }
+    
+    .tech-icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+    
     .row {
         flex-direction: column;
     }
     
     .contact-image {
-        display: none; /* Hide on smaller screens */
+        display: none; 
     }
     
     .contact-text {
@@ -1288,15 +969,9 @@ body {
         max-width: 400px;
         margin: 0 auto;
     }
-    
-    /* Footer */
-    .footer-content {
-        gap: 30px;
-    }
 }
 
 @media (max-width: 576px) {
-    /* Tighter spacing for very small screens */
     .container {
         padding-left: 15px;
         padding-right: 15px;
@@ -1326,54 +1001,22 @@ body {
         font-size: 20px;
     }
     
-    /* Fix for slider on very small screens */
+    
     .slider-container {
-        height: 280px; /* Fixed height for consistency */
+        height: 280px; 
     }
     
     .slider img {
         height: 290px;
-        width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: contain;
-    flex-shrink: 0;
     }
     
-    /* Button sizes */
     .btn, .btn-read, .exp {
         padding: 10px 20px;
         font-size: 15px;
     }
 }
 
-/* Fix for form elements on iOS */
-@supports (-webkit-touch-callout: none) {
-    input, 
-    textarea {
-        font-size: 16px !important; /* Prevents zoom on iOS */
-    }
-    
-    .form-control:focus {
-        font-size: 16px !important;
-    }
-}
 
-/* Improved slider transition */
-.slider {
-    will-change: transform;
-}
-
-/* Active nav link styling */
-nav ul li a.active {
-    color: var(--primary);
-}
-
-nav ul li a.active:after {
-    width: 100%;
-}
-
-/* Fix for technology cards on tablet */
 @media (min-width: 768px) and (max-width: 991px) {
     .tech-cards {
         display: grid;
@@ -1386,9 +1029,14 @@ nav ul li a.active:after {
     }
 }
 
-/* Fix for contact form alignment */
-@media (max-width: 991px) {
-    .contact .container {
-        padding: 0 15px;
+
+@supports (-webkit-touch-callout: none) {
+    input, 
+    textarea {
+        font-size: 16px !important; 
+    }
+    
+    .form-control:focus {
+        font-size: 16px !important;
     }
 }

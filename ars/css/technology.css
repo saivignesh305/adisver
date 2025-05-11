@@ -943,13 +943,6 @@ body {
 }
 
 
-
-
-
-
-
-/************************/
-
 .tech-detail {
         display: flex;
         list-style: none;
@@ -1333,10 +1326,15 @@ body {
         margin-bottom: 20px;
     }
     
-    .ai-content, 
+    .ai-content
+    {
+        flex-direction: column;
+        gap : 20px;
+    }
     .cognitive-content, 
     .ml-content {
         flex-direction: column;
+        gap : 10px;
     }
     
     .ai-text, 

@@ -207,13 +207,11 @@ nav ul li a:hover:after {
 
 .exp {
     display: inline-block;
-    padding: 12px 30px;
     background-color: var(--accent);
     color: var(--white);
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 18px;
     transition: all 0.3s;
     border: none;
     cursor: pointer;
@@ -1025,7 +1023,7 @@ footer {
         padding: 70px 0;
     }
 
-git
+
 
     .hero-image img {
         max-width: 95%;
@@ -1568,7 +1566,7 @@ body {
     .tech-detail a {
     color: white;
     text-decoration: none;
-    font-size: small;
+    font-size: 14px;
     }
     
     .hero-buttons {

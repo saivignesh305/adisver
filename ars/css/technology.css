@@ -335,6 +335,7 @@ nav ul li a:hover:after {
     color: var(--gray);
     max-width: 700px;
     margin: 20px auto 0;
+    text-align: center;
 }
 
 .about-content {

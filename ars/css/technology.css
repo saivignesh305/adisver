@@ -149,7 +149,7 @@ nav ul li a:hover:after {
 
 .hero-text {
     flex: 1;
-    padding-right: 40px;
+    
     
 }
 
@@ -293,10 +293,7 @@ nav ul li a:hover:after {
         text-align: center;
     }
 
-    .hero-text {
-        padding-right: 0;
-        margin-bottom: 30px;
-    }
+
 }
 
 
@@ -935,11 +932,7 @@ footer {
         flex-direction: column;
     }
 
-    .hero-text {
-        padding-right: 0;
-        margin-bottom: 40px;
-        text-align: center;
-    }
+
 
     .hero-image {
         text-align: center;
@@ -1032,10 +1025,7 @@ footer {
         padding: 70px 0;
     }
 
-    .btn {
-        padding: 10px 25px;
-        font-size: 14px;
-    }
+git
 
     .hero-image img {
         max-width: 95%;
@@ -1140,11 +1130,7 @@ body {
         flex-direction: column;
     }
     
-    .hero-text {
-        padding-right: 0;
-        margin-bottom: 30px;
-        text-align: center;
-    }
+
     
     .about-content, 
     .choose-content {
@@ -1403,9 +1389,7 @@ body {
         margin-bottom: 1.5rem;
     }
 
-.tech-detail li {
-    color: white;
-}
+
 
 .tech-detail li:not(:last-child)::after {
     content: "/";
@@ -1579,6 +1563,12 @@ body {
         text-align: center;
         margin-bottom: 30px;
         padding-top: 90px;
+        
+    }
+    .tech-detail a {
+    color: white;
+    text-decoration: none;
+    font-size: small;
     }
     
     .hero-buttons {

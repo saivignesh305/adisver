@@ -1403,8 +1403,8 @@ body {
     
     .hero-buttons {
         flex-direction: row;
-        margin-left: 45px;
-        gap: 10px;
+        margin-left: 35px;
+        gap: 20px;
     }
     
     .section-title h3 {

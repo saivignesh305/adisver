@@ -875,7 +875,7 @@ footer {
     
    
     .hero {
-        padding: 120px 0 0px;
+        padding: 100px 0 10px;
     }
     
     .hero h2 {
@@ -999,7 +999,7 @@ footer {
     
     
     .slider-container {
-        height: 280px; 
+        height: 315px; 
     }
     
     .slider img {

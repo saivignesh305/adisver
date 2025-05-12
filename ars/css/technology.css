@@ -1276,6 +1276,7 @@ body {
     
     .hero-buttons {
         display: flex;
+        flex-direction: row;
     }
     
     .btn-outline {
@@ -1401,7 +1402,8 @@ body {
     }
     
     .hero-buttons {
-        flex-direction: column;
+        flex-direction: row;
+        margin-left: 45px;
         gap: 10px;
     }
     

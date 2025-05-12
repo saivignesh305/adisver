@@ -1363,7 +1363,7 @@ body {
     .ml, 
     .technology, 
     .contact {
-        padding: 30px;
+        padding: 30px 15px;
     }
     
     .footer-content > div {

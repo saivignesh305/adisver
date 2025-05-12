@@ -916,7 +916,11 @@ footer {
         padding: 70px 0;
     }
     
-    .about, 
+    .about
+    {
+        padding: 15px;
+        padding-top: 50px;
+    } 
     .choose, 
     .products, 
     .technology, 

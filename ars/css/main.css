@@ -168,14 +168,10 @@ nav ul li a.active {
     padding-right: 40px;
 }
 
-.hero-text h2,
-.hero-text h5 {
+.hero-text h2 {
     line-height: 4rem;
 }
 
-.hero-text h3 {
-    line-height: 3rem;
-}
 
 .hero h2 {
     font-size: 45px;
@@ -571,7 +567,6 @@ textarea.form-control {
     border-radius: 20px;
     font-size: 16px;
     cursor: pointer;
-    width: 50%;
     transition: all 0.3s ease;
 }
 

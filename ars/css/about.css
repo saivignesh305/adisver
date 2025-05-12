@@ -1222,11 +1222,6 @@ nav ul li a.active:after {
     z-index: 0;
 }
 /* Responsive Styles */
-@media (min-width: 1200px) {
-    .contact .contact-text {
-        padding-right: calc(((100% - 1140px) / 2) + 0.75rem);
-    }
-}
 
 @media (min-width: 1400px) {
     .contact .contact-text {
@@ -1234,15 +1229,6 @@ nav ul li a.active:after {
     }
 }
 
-@media (min-width: 992px) {
-    .contact .container {
-        max-width: 100%;
-    }
-
-    .contact .contact-text {
-        padding-right: calc(((100% - 960px) / 2) + 0.75rem);
-    }
-}
 
 @media (min-width: 768px) and (max-width: 991px) {
     .tech-cards {

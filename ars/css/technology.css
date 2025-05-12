@@ -145,7 +145,7 @@ nav ul li a:hover:after {
     align-items: center;
     justify-content: space-between;
     padding-top: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 180px;
 }
 
 .image-container {
@@ -164,8 +164,6 @@ nav ul li a:hover:after {
 
 .hero-text {
     flex: 1;
-    
-    
 }
 
 .hero-text h2,h5 {
@@ -276,28 +274,6 @@ nav ul li a:hover:after {
     color: var(--primary);
 }
 
-/* slider */
-.slider-container {
-    flex: 1;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.slider {
-    display: flex;
-    gap: 10px;
-}
-
-
-
-
-/**** About Section ****/
-.about {
-    padding: 100px 0;
-    background-color: var(--light);
-}
-
 .section-title {
     text-align: center;
     margin-bottom: 60px;
@@ -327,165 +303,6 @@ nav ul li a:hover:after {
     color: var(--gray);
     max-width: 700px;
     margin: 20px auto 0;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text h4 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: var(--dark);
-}
-
-.about-text p {
-    margin-bottom: 20px;
-    color: var(--gray);
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-.about-image {
-    flex: 1;
-    border-radius: 15px;
-    overflow: hidden;
-    padding: 10px;
-    background-color: var(--light);
-}
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-
-
-/**** why choose****/
-
-.choose {
-    padding: 100px 0;
-    background-color: var(--white);
-}
-
-.choose-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 100px;
-}
-
-.choose-text {
-    flex: 1;
-}
-
-.choose-text h4 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: var(--dark);
-}
-
-.choose-text p {
-    margin-bottom: 20px;
-    color: var(--gray);
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-.choose-image {
-    flex: 1;
-    border-radius: 15px;
-    overflow: hidden;
-    padding: 10px;
-    max-width: 550px;
-}
-
-.choose-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border: none;
-}
-
-/**** Products Section ****/
-.products {
-    padding: 100px 0;
-    background-color: var(--light);
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.product-card {
-    background-color: var(--white);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-}
-
-.product-image {
-    height: 350px;
-    overflow: hidden;
-    padding: 15px 15px 0 15px;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
-    border-radius: 10px;
-}
-
-.product-card:hover .product-image img {
-    transform: scale(1.05);
-}
-
-.product-info {
-    padding: 30px;
-}
-
-.product-info h4 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: var(--primary);
-}
-
-.product-info p {
-    color: var(--gray);
-    margin-bottom: 20px;
-}
-
-.product-features {
-    margin-bottom: 20px;
-}
-
-.feature {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.feature i {
-    color: var(--accent);
-    margin-right: 10px;
 }
 
 /**** Technology Section ****/
@@ -564,6 +381,180 @@ nav ul li a:hover:after {
 .tech-card-middle p {
     color: var(--gray);
     font-size: 16px;
+}
+
+.tech-detail {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.tech-detail li:not(:last-child)::after {
+    content: "/";
+    margin-left: 8px;
+    margin-right: 8px;
+    color: white;
+}
+
+.tech-detail a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/**** ai Section ****/
+.ai {
+    padding: 100px 0;
+    background-color: var(--light);
+}
+
+.ai-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.ai-text {
+    flex: 1;
+}
+
+.ai-text h4 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.ai-text p {
+    margin-bottom: 20px;
+    color: var(--gray);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.ai-image {
+    flex: 1;
+    border: none;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.ai-image img {
+    width: 100%;
+    border: none;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.ai-image img:hover {
+    transform: scale(1.02);
+}
+
+
+/**** cognitive ****/
+
+.cognitive {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.cognitive-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.cognitive-text {
+    flex: 1;
+}
+
+.cognitive-text h4 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.cognitive-text p {
+    margin-bottom: 20px;
+    color: var(--gray);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.cognitive-image {
+    flex: 1;
+    border: none;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.cognitive-image img {
+    width: 100%;
+    border: none;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.cognitive-image img:hover {
+    transform: scale(1.02);
+}
+
+/**** machine learing ****/
+
+.ml {
+    padding: 100px 0;
+    background-color: var(--light);
+}
+
+.ml-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.ml-text {
+    flex: 1;
+}
+
+.ml-text h4 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.ml-text p {
+    margin-bottom: 20px;
+    color: var(--gray);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.ml-image {
+    flex: 1;
+    border: none;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.ml-image img {
+    width: 100%;
+    border: none;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.ml-image img:hover {
+    transform: scale(1.02);
 }
 
 
@@ -957,179 +948,6 @@ body {
 }
 
 
-.tech-detail {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        flex-wrap: wrap;
-        margin-bottom: 1.5rem;
-    }
-
-
-
-.tech-detail li:not(:last-child)::after {
-    content: "/";
-    margin-left: 8px;
-    margin-right: 8px;
-    color: white;
-}
-
-.tech-detail a {
-    color: white;
-    text-decoration: none;
-}
-
-
-/**** ai Section ****/
-.ai {
-    padding: 100px 0;
-    background-color: var(--light);
-}
-
-.ai-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-}
-
-.ai-text {
-    flex: 1;
-}
-
-.ai-text h4 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: var(--dark);
-}
-
-.ai-text p {
-    margin-bottom: 20px;
-    color: var(--gray);
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-.ai-image {
-    flex: 1;
-    border: none;
-    overflow: hidden;
-    padding: 10px;
-}
-
-.ai-image img {
-    width: 100%;
-    border: none;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.ai-image img:hover {
-    transform: scale(1.02);
-}
-
-
-/**** cognitive ****/
-
-.cognitive {
-    padding: 100px 0;
-    background-color: var(--white);
-}
-
-.cognitive-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 100px;
-}
-
-.cognitive-text {
-    flex: 1;
-}
-
-.cognitive-text h4 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: var(--dark);
-}
-
-.cognitive-text p {
-    margin-bottom: 20px;
-    color: var(--gray);
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-.cognitive-image {
-    flex: 1;
-    border: none;
-    overflow: hidden;
-    padding: 10px;
-}
-
-.cognitive-image img {
-    width: 100%;
-    border: none;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.cognitive-image img:hover {
-    transform: scale(1.02);
-}
-
-/**** machine learing ****/
-
-.ml {
-    padding: 100px 0;
-    background-color: var(--light);
-}
-
-.ml-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 100px;
-}
-
-.ml-text {
-    flex: 1;
-}
-
-.ml-text h4 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: var(--dark);
-}
-
-.ml-text p {
-    margin-bottom: 20px;
-    color: var(--gray);
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-.ml-image {
-    flex: 1;
-    border: none;
-    overflow: hidden;
-    padding: 10px;
-}
-
-.ml-image img {
-    width: 100%;
-    border: none;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.ml-image img:hover {
-    transform: scale(1.02);
-}
  /* Media Queries - Consolidated */
 
 /* Basic Responsive Slider */

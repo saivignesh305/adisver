@@ -770,9 +770,13 @@ footer {
         text-align: center;
     }
     
-    .about-content, 
+    .about-content
+    {
+        flex-direction: column-reverse;
+    }
+
     .choose-content {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     
     .choose-image, 
@@ -873,7 +877,7 @@ footer {
     
    
     .hero {
-        padding: 100px 0 10px;
+        padding: 100px 0 0px;
     }
     
     .hero h2 {

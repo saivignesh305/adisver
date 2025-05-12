@@ -1167,6 +1167,7 @@ body {
 @media (max-width: 991px) {
     .hero-content {
         flex-direction: column;
+        padding-top: 90px;
         padding-bottom: 30px;
     }
     

@@ -1403,7 +1403,7 @@ body {
     
     .hero-buttons {
         flex-direction: row;
-        margin-left: 40px;
+        margin-left: 10px;
         gap: 20px;
     }
     
@@ -1443,8 +1443,8 @@ body {
     
     /* Button sizes */
     .btn, .btn-read, .exp {
-        padding: 10px 20px;
-        font-size: 15px;
+        padding: 10px 30px;
+   
     }
     
     .tech-card, .tech-card-middle {

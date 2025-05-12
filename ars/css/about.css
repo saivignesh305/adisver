@@ -1530,7 +1530,7 @@ nav ul li a.active:after {
     /* Button sizes */
     .btn, .btn-read, .exp {
         padding: 10px 20px;
-        font-size: 15px;
+        
     }
 }
 

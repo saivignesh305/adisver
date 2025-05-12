@@ -153,6 +153,7 @@ nav ul li a:hover:after {
     text-align: right;
     padding: 20px;
     max-width: 100%;
+    padding-top: 10px;
 }
 
 .image-container img {
@@ -960,6 +961,7 @@ body {
     .hero-content {
         flex-direction: column;
         text-align: center;
+        gap:100px;
     }
 
 }

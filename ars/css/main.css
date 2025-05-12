@@ -488,12 +488,10 @@ nav ul li a.active {
 
 /**** Contact Section ****/
 .contact {
-    background: url("../img/bg-hero.png") center center no-repeat;
-    background-color: #0069a1;
-    background-size: cover;
     display: flex;
-    padding: 50px 0;
     color: white;
+    background: url(../img/bg-hero.png) center center / cover no-repeat rgb(0, 105, 161);
+    padding: 50px 0px;
 }
 
 .row {

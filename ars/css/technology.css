@@ -1344,6 +1344,7 @@ body {
     .cognitive-content, 
     .ml-content {
         flex-direction: column;
+        gap: 20px;
     }
     
     .ai-text, 

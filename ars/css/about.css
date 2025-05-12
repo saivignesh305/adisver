@@ -166,13 +166,15 @@ nav ul li a.active {
     padding-right: 40px;
 }
 
-.hero-text h2, h5 {
+.image-container {
+    flex: 1;
+}
+
+
+.hero-text h2 {
     line-height: 4rem;
 }
 
-.hero-text h3 {
-    line-height: 3rem;
-}
 
 .hero-image {
     flex: 1;
@@ -251,30 +253,6 @@ nav ul li a.active {
     color: var(--primary);
 }
 
-/* Slider */
-.slider-container {
-    flex: 1;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.slider {
-    display: flex;
-    gap: 10px;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-    will-change: transform;
-}
-
-.slider img {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: contain;
-    flex-shrink: 0;
-}
 
 /**** Section Styles - Common ****/
 .section-title {
@@ -748,7 +726,6 @@ textarea.form-control {
     border-radius: 20px;
     font-size: 16px;
     cursor: pointer;
-    width: 50%;
     transition: all 0.3s ease;
 }
 
@@ -768,7 +745,6 @@ textarea.form-control {
 .con {
     padding: 0 !important;
 }
-
 /**** Footer ****/
 footer {
     background: url(../img/footer.png) center center no-repeat;
@@ -925,13 +901,6 @@ footer {
     color: #aaa;
     font-size: 14px;
 }
-
-.image-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
 
 /* Fix for form elements on iOS */
 @supports (-webkit-touch-callout: none) {

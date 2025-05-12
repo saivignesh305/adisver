@@ -129,7 +129,7 @@ nav ul li a:hover:after {
     z-index: 10;
 }
 
-
+/**** Hero Section ****/
 
 .hero {
     background: url("../img/bg-hero.png") center center no-repeat;
@@ -144,14 +144,17 @@ nav ul li a:hover:after {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 50px;
-    padding-bottom: 80px;
+    padding-top: 40px;
+    padding-bottom: 164px;
 }
 
 .hero-text {
     flex: 1;
-    
-    
+    padding-right: 40px;
+}
+
+.image-container {
+    flex: 1;
 }
 
 .hero-text h2,h5 {
@@ -181,12 +184,6 @@ nav ul li a:hover:after {
     margin-bottom: 20px;
     font-weight: 700;
 }
-.hero h5 {
-    font-size: 46px;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
 .hero p {
     font-size: 20px;
     margin-bottom: 40px;
@@ -261,20 +258,6 @@ nav ul li a:hover:after {
     background-color: var(--white);
     color: var(--primary);
 }
-
-/* slider */
-.slider-container {
-    flex: 1;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.slider {
-    display: flex;
-    gap: 10px;
-}
-
 
 
 
@@ -621,8 +604,7 @@ nav ul li a:hover:after {
 */
 
 
-/**** contact us ****/
-
+/**** Contact Section ****/
 .contact {
     background: url("../img/bg-hero.png") center center no-repeat;
     background-color: #0069a1;
@@ -631,8 +613,6 @@ nav ul li a:hover:after {
     padding: 50px 0;
     color: white;
 }
-
-
 
 .row {
     display: flex;
@@ -655,7 +635,7 @@ nav ul li a:hover:after {
     display: block;
 }
 
-.contact-text h1{
+.contact-text h1 {
     color: white;
 }
 
@@ -725,7 +705,6 @@ textarea.form-control {
 .con {
     padding: 0 !important;
 }
-
 
 /* Footer */
 
@@ -939,7 +918,6 @@ body {
 
 .message {
     width: auto;
-    min-width: 160px;
 }
 
 

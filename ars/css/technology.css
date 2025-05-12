@@ -1235,7 +1235,7 @@ body {
         left: 0;
         width: 100%;
         height: auto;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: #ffffff/*rgba(255, 255, 255, 0.95)*/;
         flex-direction: column;
         padding: 20px 0;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);

@@ -951,7 +951,7 @@ nav ul li a.active:after {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-left: 8%;
+        margin-left: 12%;
         gap: 15px;
     }
 

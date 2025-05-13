@@ -1023,8 +1023,8 @@ nav ul li a.active:after {
 @media (max-width: 576px) {
     /* Tighter spacing for very small screens */
     .container {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
     
     .hero h2, .hero-text h2 {

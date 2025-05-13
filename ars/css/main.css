@@ -980,7 +980,7 @@ footer {
     }
     
     .hero h2 {
-        font-size: 24px;
+        font-size: 28px;
     }
     
     .section-title h3 {
@@ -1009,7 +1009,7 @@ footer {
     }
     
     .slider img {
-        height: 290px;
+        height: 290px !important;
     }
     
     .btn, .btn-read, .exp {

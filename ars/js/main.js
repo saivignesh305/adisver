@@ -224,14 +224,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Responsive fixes for slider and image loading
+    
     const lazyLoadImages = () => {
-        // Adjust slider height based on viewport
+        
         if (slider) {
             const viewportWidth = window.innerWidth;
             if (viewportWidth < 768) {
-                // On smaller screens, make the slider more compact
-                slider.style.height = '200px';
+                
+                slider.style.height = '289px';
             } else {
                 slider.style.height = 'auto';
             }

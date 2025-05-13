@@ -800,6 +800,7 @@ nav ul li a.active:after {
     .vision-content {
         flex-direction: column;
         gap: 30px;
+        padding: 10px 15px;
     }
 
     .about-text{
@@ -950,7 +951,7 @@ nav ul li a.active:after {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-left: 60px;
+        margin-left: 8%;
         gap: 15px;
     }
 

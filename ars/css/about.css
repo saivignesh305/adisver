@@ -27,6 +27,12 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+.contact .container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px;
+    padding: 0px;
+}
 
 p {
     text-align: justify;

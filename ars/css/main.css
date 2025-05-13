@@ -890,7 +890,7 @@ footer {
     }
     
     .hero p {
-        font-size: 16px;
+        font-size: 1rem;
         margin-bottom: 30px;
         margin-left: 10px;
         padding-top: 30px;
@@ -979,7 +979,7 @@ footer {
     }
     
     .hero h2 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
     
     .section-title h3 {
@@ -1012,8 +1012,8 @@ footer {
     }
     
     .btn, .btn-read, .exp {
-        padding: 10px 20px;
-        font-size: 15px;
+        
+        font-size: 0.9rem;
     }
 }
 

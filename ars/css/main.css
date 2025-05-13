@@ -898,10 +898,9 @@ footer {
     }
     
     .hero-buttons {
-        display: flex;
+        
         flex-direction: row;
-        margin-left: 40px;
-        gap: 15px;
+        
     }
     
     .btn-outline {

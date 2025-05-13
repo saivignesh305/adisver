@@ -801,7 +801,7 @@ nav ul li a.active:after {
     .vision-content {
         flex-direction: column;
         gap: 0px;
-        padding: 15px 15px;
+        padding: 1.5rem 0.5rem;
     }
 
     .about-text{
@@ -830,7 +830,7 @@ nav ul li a.active:after {
 }
     .hero-text {
         padding:8% 2%;
-        margin-bottom: 40px;
+        margin-bottom: 1rem;
         text-align: center;
     }
 
@@ -948,8 +948,8 @@ nav ul li a.active:after {
     }
 
     .hero p {
-        font-size: 16px;
-        margin-bottom: 30px;
+        font-size: 1rem;
+        margin-bottom: 3rem;
         
     }
 
@@ -1031,7 +1031,7 @@ nav ul li a.active:after {
     }
     
     .hero h2, .hero-text h2 {
-        font-size: 24px;
+        font-size: 1.75rem;
     }
     
     .section-title h3 {
@@ -1135,7 +1135,11 @@ nav ul li a.active:after {
 
 @media (max-width: 576px) {
     .hero-text h2 {
-        font-size: 28px;
+        line-height: 2.6rem;
+        padding-top: 0rem;
+        margin: 0rem;
+        margin-bottom: 3rem;
+    }
     }
 
     .section-title h3 {

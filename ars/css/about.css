@@ -952,9 +952,12 @@ nav ul li a.active:after {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-left: 12%;
+        
         gap: 15px;
     }
+    .image-container img{
+        height: 300px
+    };;
 
     .btn-outline {
         margin-left: 0;

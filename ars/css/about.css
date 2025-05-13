@@ -801,7 +801,7 @@ nav ul li a.active:after {
     .vision-content {
         flex-direction: column;
         gap: 30px;
-        padding: 10px 15px;
+        padding: 15px 15px;
     }
 
     .about-text{
@@ -829,7 +829,7 @@ nav ul li a.active:after {
     padding: 10px 0px;
 }
     .hero-text {
-        padding-right: 0;
+        padding:8% 2%;
         margin-bottom: 40px;
         text-align: center;
     }
@@ -945,16 +945,9 @@ nav ul li a.active:after {
     .hero p {
         font-size: 16px;
         margin-bottom: 30px;
-        margin-right: 10px;
+        
     }
 
-    .hero-buttons {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        
-        gap: 15px;
-    }
     .image-container img{
         height: 300px
     };;

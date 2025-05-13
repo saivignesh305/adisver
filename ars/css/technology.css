@@ -961,7 +961,7 @@ body {
     .hero-content {
         flex-direction: column;
         text-align: center;
-        gap:100px;
+        gap:50px;
     }
 
 }
@@ -1145,11 +1145,21 @@ body {
     .footer-content {
         gap: 30px;
     }
+ .tech-detail {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
     
     .tech-detail a {
+        
         color: white;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 0.85rem;
     }
     
     .product-image {

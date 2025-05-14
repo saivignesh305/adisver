@@ -1,16 +1,14 @@
-/**
- * Enhanced Mobile-Responsive JavaScript for Adisver Website
- */
+
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation Toggle
+    
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const navbar = document.querySelector('#navbar');
     
     if (mobileNavToggle && navbar) {
         mobileNavToggle.addEventListener('click', () => {
             navbar.classList.toggle('active');
-            // Toggle icon between bars and times
+           
             const icon = mobileNavToggle.querySelector('i');
             if (icon) {
                 icon.classList.toggle('fa-bars');
@@ -19,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Image Slider with touch support
+    
     const slider = document.querySelector('.slider');
     const images = document.querySelectorAll('.slider img');
     
@@ -28,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let startX, moveX;
         let isSliding = false;
         
-        // Auto slide functionality
+        
         const startAutoSlide = () => {
             return setInterval(() => {
                 if (!isSliding) {
@@ -40,12 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         let autoSlideInterval = startAutoSlide();
         
-        // Update slider position
         const updateSliderPosition = () => {
             slider.style.transform = `translateX(${-index * 100}%)`;
         };
         
-        // Touch events for mobile swipe
+        
         slider.addEventListener('touchstart', (e) => {
             isSliding = true;
             startX = e.touches[0].clientX;
@@ -58,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const diff = (startX - moveX) / slider.offsetWidth * 100;
                 const transform = -index * 100 - diff;
                 
-                // Limit sliding to adjacent slides
+                
                 if (Math.abs(diff) < 100) {
                     slider.style.transform = `translateX(${transform}%)`;
                 }
@@ -70,10 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 const diff = startX - moveX;
                 
                 if (diff > 50 && index < images.length - 1) {
-                    // Swipe left - next slide
+                    
                     index++;
                 } else if (diff < -50 && index > 0) {
-                    // Swipe right - previous slide
+                    
                     index--;
                 }
                 
@@ -82,13 +79,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 moveX = null;
                 isSliding = false;
                 
-                // Restart auto sliding
+                
                 autoSlideInterval = startAutoSlide();
             }
         }, {passive: true});
     }
     
-    // Smooth scrolling for anchor links with fixed header offset
+    
     const headerHeight = document.querySelector('header')?.offsetHeight || 80;
     
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -109,10 +106,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth'
                 });
                 
-                // Close mobile menu if open
                 if (navbar && navbar.classList.contains('active')) {
                     navbar.classList.remove('active');
-                    // Reset hamburger icon if needed
+                    
                     const icon = mobileNavToggle?.querySelector('i');
                     if (icon) {
                         icon.classList.add('fa-bars');

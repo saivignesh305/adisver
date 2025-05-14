@@ -160,7 +160,7 @@ nav ul li a.active {
 
 .hero-content {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
 }
 
@@ -252,7 +252,7 @@ nav ul li a.active {
 }
 
 .exp {
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 .btn-read:hover {

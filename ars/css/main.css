@@ -160,7 +160,7 @@ nav ul li a.active {
 
 .hero-content {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -334,9 +334,9 @@ nav ul li a.active {
 }
 
 .about-text p, .choose-text p {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     color: var(--gray);
-    font-size: 17px;
+    font-size: 1.03rem;
     line-height: 1.6;
 }
 
@@ -917,14 +917,14 @@ footer {
     
     .about
     {
-        padding: 15px;
-        padding-top: 50px;
+        padding: 0.9rem;
+        padding-top: 3rem;
     } 
     .choose, 
     .products, 
     .technology, 
     .contact {
-        padding: 15px;
+        padding: 0.9rem;
     }
     
     .section-title {
@@ -933,7 +933,7 @@ footer {
     
     .products-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 2.3rem;
     }
     
     .slider-container {
@@ -974,8 +974,8 @@ footer {
 
 @media (max-width: 576px) {
     .container {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
     .hero h2 {

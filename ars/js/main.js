@@ -1,6 +1,17 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
+
+fetch('Footer.html')
+  .then(response => response.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+    const child = doc.getElementById('child');
+    const footer = document.querySelector('footer');
+    if (child && footer) {
+      footer.appendChild(child);
+    }
+  });
+
     
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const navbar = document.querySelector('#navbar');

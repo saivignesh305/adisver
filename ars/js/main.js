@@ -11,6 +11,8 @@ fetch('Footer.html')
       footer.appendChild(child);
     }
   });
+  
+
 
     
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');

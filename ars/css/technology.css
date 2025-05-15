@@ -633,7 +633,7 @@ nav ul li a:hover:after {
     background: url("../img/bg-hero.png") center center no-repeat;
     background-color: #0069a1;
     background-size: cover;
-    display: flex;
+    display: flow-root;
     padding: 50px 0;
     color: white;
 }

@@ -1,17 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 fetch('Footer.html')
+    .then(response => response.text())
+    .then(data => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(data, 'text/html');
+      const child = doc.getElementById('child');
+      const footer = document.querySelector('footer');
+      if (child && footer) {
+        // Clear any existing content in footer to prevent duplicate styling
+        footer.innerHTML = '';
+        footer.appendChild(child);
+      }
+    })
+    .catch(error => {
+      console.error('Error loading footer:', error);
+    });
+  fetch('contact.html')
   .then(response => response.text())
   .then(data => {
     const parser = new DOMParser();
     const doc = parser.parseFromString(data, 'text/html');
-    const child = doc.getElementById('child');
-    const footer = document.querySelector('footer');
-    if (child && footer) {
-      footer.appendChild(child);
+    const child1 = doc.getElementById('contact-child');
+    const contact = document.getElementById('contact-parent')
+    if (child1 && contact) {
+      contact.appendChild(child1);
     }
   });
-  
+
 
 
     

@@ -30,7 +30,7 @@ html {
     width: 100%;
     max-width: 80rem;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1rem;
 }
 
 p {
@@ -211,7 +211,7 @@ nav ul li a.active {
     width: 100%;
     height: auto;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: scale-down;
     flex-shrink: 0;
 }
 

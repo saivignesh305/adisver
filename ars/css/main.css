@@ -209,7 +209,7 @@ nav ul li a.active {
 
 .slider img {
     width: 100%;
-    height: auto;
+    height: 35rem;
     max-height: 100%;
     object-fit: scale-down;
     flex-shrink: 0;
@@ -787,3 +787,4 @@ nav ul li a.active {
     .form-control:focus {
         font-size: 16px !important;
     }
+}

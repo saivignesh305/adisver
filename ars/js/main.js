@@ -8,7 +8,7 @@ fetch('Footer.html')
       const child = doc.getElementById('child');
       const footer = document.querySelector('footer');
       if (child && footer) {
-        // Clear any existing content in footer to prevent duplicate styling
+        
         footer.innerHTML = '';
         footer.appendChild(child);
       }

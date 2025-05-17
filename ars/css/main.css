@@ -131,17 +131,6 @@ nav ul li a.active {
 
 .mobile-nav-toggle {
     display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: var(--dark);
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1001;
-    transition: all 0.3s ease;
 }
 
 .mobile-nav-toggle:focus {
@@ -582,6 +571,8 @@ nav ul li a.active {
 
     .header-container {
         padding: 0px;
+        justify-content: start;
+        padding-left: 1rem;
     }
     
     .logo h1 {
@@ -590,16 +581,25 @@ nav ul li a.active {
     
     .mobile-nav-toggle {
         display: block;
+        padding-right: 1rem;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--dark);
+        left: 20px;
+        z-index: 1001;
+        transition: all 0.3s ease;
     }
     
     nav ul {
         display: none;
         position: fixed;
-        top: 70px;
+        top: 65px;
         left: 0;
-        width: 100%;
+        width: 50%;
         height: auto;
-        background-color: #ffffff/*rgba(255, 255, 255, 0.95)*/;
+        background-color: #f8f9faf6;
         flex-direction: column;
         padding: 20px 0;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -614,9 +614,7 @@ nav ul li a.active {
     
     nav ul li {
         margin: 0;
-        padding: 15px 30px;
-        width: 100%;
-        text-align: center;
+        padding: 15px 20px;
     }
     
     nav ul li a {

@@ -475,7 +475,30 @@ nav ul li a.active {
     color: var(--gray);
     font-size: 16px;
 }
+.mobile-menu-logo {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 
+.mobile-menu-logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.mobile-menu-logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0;
+}
+
+.mobile-menu-logo span {
+    color: var(--accent);
+}
 
 
 

@@ -32,7 +32,8 @@ fetch('Footer.html')
 
 
     
-   const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+   // Improved mobile navigation
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const navbar = document.querySelector('#navbar');
     const body = document.querySelector('body');
     

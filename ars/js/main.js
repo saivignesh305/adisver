@@ -13,6 +13,7 @@ fetch('Footer.html')
         footer.appendChild(child);
       }
     })
+    
     .catch(error => {
       console.error('Error loading footer:', error);
     });
@@ -31,20 +32,45 @@ fetch('Footer.html')
 
 
     
-    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+   const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const navbar = document.querySelector('#navbar');
+    const body = document.querySelector('body');
     
     if (mobileNavToggle && navbar) {
-        mobileNavToggle.addEventListener('click', () => {
+        // Toggle menu when hamburger icon is clicked
+        mobileNavToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent this click from closing the menu immediately
             navbar.classList.toggle('active');
-           
-            const icon = mobileNavToggle.querySelector('i');
-            if (icon) {
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-times');
+            body.classList.toggle('menu-open'); // Toggle overlay
+        });
+        
+        // Close menu when clicking anywhere on the document (outside the menu)
+        document.addEventListener('click', (e) => {
+            // If navbar is active and the click target is not within the navbar or the toggle button
+            if (navbar.classList.contains('active') && 
+                !navbar.contains(e.target) && 
+                e.target !== mobileNavToggle && 
+                !mobileNavToggle.contains(e.target)) {
+                navbar.classList.remove('active');
+                body.classList.remove('menu-open'); // Remove overlay
             }
         });
+        
+        // Prevent clicks inside the navbar from closing it
+        navbar.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+        
+        // Close menu when clicking a link
+        const navLinks = navbar.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+                body.classList.remove('menu-open'); // Remove overlay
+            });
+        });
     }
+    
     
     
     const slider = document.querySelector('.slider');

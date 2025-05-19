@@ -568,15 +568,14 @@ nav ul li a.active {
 }
 
 @media (max-width: 768px) {
-
     @media (max-width: 768px) {
     nav ul {
         display: none;
         position: fixed;
         top: 0;
         left: -100%; /* Start off-screen */
-        width: 70%; /* Take up 70% of screen width */
-        height: 100vh; /* Full screen height */
+            width: 70%; /* Take up 70% of screen width */
+            height: 100vh; 
         background-color: var(--white);
         flex-direction: column;
         padding: 80px 0 20px; /* Add padding to top to account for header */

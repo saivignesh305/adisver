@@ -16,17 +16,17 @@ fetch('Footer.html')
     .catch(error => {
       console.error('Error loading footer:', error);
     });
-  fetch('contact.html')
-  .then(response => response.text())
-  .then(data => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(data, 'text/html');
-    const child1 = doc.getElementById('contact-child');
-    const contact = document.getElementById('contact-parent')
-    if (child1 && contact) {
-      contact.appendChild(child1);
-    }
-  });
+    fetch('contact.html')
+    .then(response => response.text())
+    .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+        const child1 = doc.getElementById('contact-child');
+        const contact = document.getElementById('contact-parent')
+        if (child1 && contact) {
+        contact.appendChild(child1);
+        }
+    });
 
 
 

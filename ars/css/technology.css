@@ -39,7 +39,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
-    padding: 0.6rem 0;
+    padding: 10px 0;
 }
 
 .header-container {
@@ -1057,8 +1057,8 @@ textarea.form-control {
 @media (max-width: 576px) {
     /* Tighter spacing for very small screens */
     .container {
-        padding-left: 0rem;
-        padding-right: 0rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     
     .hero {

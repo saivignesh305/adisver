@@ -49,7 +49,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
-    padding: 0.2rem 0;
+    padding: 0.6rem 0;
 }
 
 .header-container {
@@ -568,7 +568,7 @@ nav ul li a.active {
 }
 
 @media (max-width: 768px) {
-    @media (max-width: 768px) {
+    
     nav ul {
         display: none;
         position: fixed;
@@ -603,7 +603,7 @@ nav ul li a.active {
     
     nav ul li a {
         font-size: 18px;
-        display: block;
+        
         width: 100%;
     }
     
@@ -643,7 +643,7 @@ nav ul li a.active {
         color: var(--dark);
         z-index: 1001;
     }
-}
+
     
    
     .hero {
@@ -744,8 +744,8 @@ nav ul li a.active {
 
 @media (max-width: 576px) {
     .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     
     .hero h2 {

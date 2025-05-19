@@ -844,7 +844,7 @@ footer {
     /* Adjust the header for mobile */
     .header-container {
         padding: 0;
-        justify-content: space-between;
+        justify-content: left;
     }
     
     .mobile-nav-toggle {

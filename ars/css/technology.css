@@ -752,6 +752,10 @@ textarea.form-control {
     width: auto;
     min-width: 160px;
 }
+.logo1
+{
+    display: none;
+}
 
 
  /* Media Queries - Consolidated */
@@ -845,16 +849,37 @@ textarea.form-control {
 
 /* Mobile Screens */
 @media (max-width: 768px) {
+    .logo1 {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 3.5rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.logo1 img  {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.logo1 h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0;
+}
+.logo1 span {
+    color: var(--accent);
+}
     nav ul {
         display: none;
         position: fixed;
         top: 0;
         left: -100%; /* Start off-screen */
-        width: 70%; /* Take up 70% of screen width */
+        width: 80%; /* Take up 70% of screen width */
         height: 100vh; 
         background-color: var(--white);
         flex-direction: column;
-        padding: 80px 0 20px; /* Add padding to top to account for header */
+        padding:0; /* Add padding to top to account for header */
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         z-index: 999;
         overflow-y: auto;
@@ -864,6 +889,7 @@ textarea.form-control {
     nav ul.active {
         display: flex;
         left: 0; /* Show the menu by bringing it on-screen */
+        
     }
     
     nav ul li {
@@ -879,7 +905,7 @@ textarea.form-control {
     
     nav ul li a {
         font-size: 18px;
-        display: block;
+        
         width: 100%;
     }
     

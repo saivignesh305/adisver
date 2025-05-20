@@ -475,32 +475,9 @@ nav ul li a.active {
     color: var(--gray);
     font-size: 16px;
 }
-.mobile-menu-logo {
-    display: flex;
-    align-items: center;
-    padding: 20px 30px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+.logo1 {
+    display: none;
 }
-
-.mobile-menu-logo img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.mobile-menu-logo h1 {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary);
-    margin: 0;
-}
-
-.mobile-menu-logo span {
-    color: var(--accent);
-}
-
-
 
 /*mobile optim*/
 @media (max-width: 1199px) {
@@ -592,16 +569,37 @@ nav ul li a.active {
 
 @media (max-width: 768px) {
     
+.logo1 {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 3.5rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.logo1 img  {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.logo1 h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0;
+}
+.logo1 span {
+    color: var(--accent);
+}
     nav ul {
         display: none;
         position: fixed;
         top: 0;
         left: -100%; /* Start off-screen */
-        width: 70%; /* Take up 70% of screen width */
+        width: 80%; /* Take up 70% of screen width */
         height: 100vh; 
         background-color: var(--white);
         flex-direction: column;
-        padding: 80px 0 20px; /* Add padding to top to account for header */
+        padding:0; /* Add padding to top to account for header */
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         z-index: 999;
         overflow-y: auto;

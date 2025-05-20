@@ -1,0 +1,79 @@
+/* Fix navbar color and mobile icon issues */
+
+/* Update mobile nav toggle positioning and styling */
+.mobile-nav-toggle {
+    display: none;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary); /* Match theme color */
+    z-index: 1001;
+    margin-right: 15px; /* Add space between icon and logo */
+}
+
+/* Mobile menu header styling to match theme */
+.mobile-menu-header {
+    background-color: var(--primary); /* Change to primary theme color */
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Fix mobile navigation background to match theme */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--primary); /* Match theme color */
+        flex-direction: column;
+        padding: 0;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        overflow-y: auto;
+        transition: left 0.3s ease;
+    }
+    
+    /* Fix header container layout for mobile */
+    .header-container {
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Add space between mobile nav toggle and logo */
+    .logo {
+        margin-left: 10px;
+    }
+    
+    /* Ensure navigation links have consistent styling */
+    nav ul li a {
+        font-size: 16px;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    
+    /* Active link styling for mobile */
+    nav ul li a.active {
+        color: var(--accent);
+    }
+    
+    /* Fix hover state for mobile navigation */
+    nav ul li a:hover {
+        color: var(--accent);
+    }
+    
+    /* Fix mobile menu link borders */
+    nav ul li {
+        margin: 0;
+        padding: 16px 24px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}

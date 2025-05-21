@@ -608,7 +608,7 @@ nav ul li a.active {
     
     nav ul.active {
         display: flex;
-        left: 0; /* Show the menu by bringing it on-screen */
+        left: 0; 
         
     }
     

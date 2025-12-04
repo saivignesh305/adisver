@@ -1,42 +1,42 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
-fetch('Footer.html')
-    .then(response => response.text())
-    .then(data => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(data, 'text/html');
-      const child = doc.getElementById('child');
-      const footer = document.querySelector('footer');
-      if (child && footer) {
-        
-        footer.innerHTML = '';
-        footer.appendChild(child);
-      }
-    })
-    
-    .catch(error => {
-      console.error('Error loading footer:', error);
-    });
+    fetch('Footer.html')
+        .then(response => response.text())
+        .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            const child = doc.getElementById('child');
+            const footer = document.querySelector('footer');
+            if (child && footer) {
+
+                footer.innerHTML = '';
+                footer.appendChild(child);
+            }
+        })
+
+        .catch(error => {
+            console.error('Error loading footer:', error);
+        });
     fetch('contact.html')
-    .then(response => response.text())
-    .then(data => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(data, 'text/html');
-        const child1 = doc.getElementById('contact-child');
-        const contact = document.getElementById('contact-parent')
-        if (child1 && contact) {
-        contact.appendChild(child1);
-        }
-    });
+        .then(response => response.text())
+        .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            const child1 = doc.getElementById('contact-child');
+            const contact = document.getElementById('contact-parent')
+            if (child1 && contact) {
+                contact.appendChild(child1);
+            }
+        });
 
 
 
-    
-   // Improved mobile navigation
+
+    // Improved mobile navigation
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const navbar = document.querySelector('#navbar');
     const body = document.querySelector('body');
-    
+
     if (mobileNavToggle && navbar) {
         // Toggle menu when hamburger icon is clicked
         mobileNavToggle.addEventListener('click', (e) => {
@@ -44,24 +44,24 @@ fetch('Footer.html')
             navbar.classList.toggle('active');
             body.classList.toggle('menu-open'); // Toggle overlay
         });
-        
+
         // Close menu when clicking anywhere on the document (outside the menu)
         document.addEventListener('click', (e) => {
             // If navbar is active and the click target is not within the navbar or the toggle button
-            if (navbar.classList.contains('active') && 
-                !navbar.contains(e.target) && 
-                e.target !== mobileNavToggle && 
+            if (navbar.classList.contains('active') &&
+                !navbar.contains(e.target) &&
+                e.target !== mobileNavToggle &&
                 !mobileNavToggle.contains(e.target)) {
                 navbar.classList.remove('active');
                 body.classList.remove('menu-open'); // Remove overlay
             }
         });
-        
+
         // Prevent clicks inside the navbar from closing it
         navbar.addEventListener('click', (e) => {
             e.stopPropagation();
         });
-        
+
         // Close menu when clicking a link
         const navLinks = navbar.querySelectorAll('a');
         navLinks.forEach(link => {
@@ -71,18 +71,18 @@ fetch('Footer.html')
             });
         });
     }
-    
-    
-    
+
+
+
     const slider = document.querySelector('.slider');
     const images = document.querySelectorAll('.slider img');
-    
+
     if (slider && images.length > 0) {
         let index = 0;
         let startX, moveX;
         let isSliding = false;
-        
-        
+
+
         const startAutoSlide = () => {
             return setInterval(() => {
                 if (!isSliding) {
@@ -91,80 +91,80 @@ fetch('Footer.html')
                 }
             }, 3000);
         };
-        
+
         let autoSlideInterval = startAutoSlide();
-        
+
         const updateSliderPosition = () => {
             slider.style.transform = `translateX(${-index * 100}%)`;
         };
-        
-        
+
+
         slider.addEventListener('touchstart', (e) => {
             isSliding = true;
             startX = e.touches[0].clientX;
             clearInterval(autoSlideInterval);
-        }, {passive: true});
-        
+        }, { passive: true });
+
         slider.addEventListener('touchmove', (e) => {
             if (isSliding) {
                 moveX = e.touches[0].clientX;
                 const diff = (startX - moveX) / slider.offsetWidth * 100;
                 const transform = -index * 100 - diff;
-                
-                
+
+
                 if (Math.abs(diff) < 100) {
                     slider.style.transform = `translateX(${transform}%)`;
                 }
             }
-        }, {passive: true});
-        
+        }, { passive: true });
+
         slider.addEventListener('touchend', (e) => {
             if (isSliding && startX && moveX) {
                 const diff = startX - moveX;
-                
+
                 if (diff > 50 && index < images.length - 1) {
-                    
+
                     index++;
                 } else if (diff < -50 && index > 0) {
-                    
+
                     index--;
                 }
-                
+
                 updateSliderPosition();
                 startX = null;
                 moveX = null;
                 isSliding = false;
-                
-                
+
+
                 autoSlideInterval = startAutoSlide();
             }
-        }, {passive: true});
+        }, { passive: true });
     }
-    
-    
+
+
     const headerHeight = document.querySelector('header')?.offsetHeight || 80;
-    
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             if (targetId === '#') return; // Skip if it's just a hash
-            
+
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 // Calculate position accounting for header height and some padding
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
                 });
-                
+
                 if (navbar && navbar.classList.contains('active')) {
                     navbar.classList.remove('active');
-                    
+
                     const icon = mobileNavToggle?.querySelector('i');
                     if (icon) {
                         icon.classList.add('fa-bars');
@@ -174,25 +174,25 @@ fetch('Footer.html')
             }
         });
     });
-    
+
     // Active navigation highlighting based on scroll position
     window.addEventListener('scroll', () => {
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('nav ul li a');
-        
+
         if (sections.length === 0 || navLinks.length === 0) return;
-        
+
         let current = '';
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop - (headerHeight + 50);
             const sectionHeight = section.offsetHeight;
-            
+
             if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
                 current = section.getAttribute('id');
             }
         });
-        
+
         navLinks.forEach(link => {
             link.classList.remove('active');
             const href = link.getAttribute('href');
@@ -201,40 +201,40 @@ fetch('Footer.html')
             }
         });
     });
-    
+
     // EmailJS contact form handling with improved error handling and validation
     if (typeof emailjs !== 'undefined') {
         emailjs.init("8L2Bpk7_VHG0Z5bXD");
-        
+
         const contactForm = document.getElementById('contactForm');
-        
+
         if (contactForm) {
             // Simple form validation
             const validateForm = (form) => {
                 const email = form.querySelector('input[name="email"]').value;
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                
+
                 if (!emailRegex.test(email)) {
                     return "Please enter a valid email address";
                 }
-                
+
                 const message = form.querySelector('textarea[name="message"]').value;
                 if (message.trim().length < 10) {
                     return "Message is too short. Please provide more details.";
                 }
-                
+
                 return null; // No errors
             };
-            
-            contactForm.addEventListener('submit', function(event) {
+
+            contactForm.addEventListener('submit', function (event) {
                 event.preventDefault();
-                
+
                 const sendButton = document.getElementById('sendButton');
                 const formStatus = document.getElementById('formStatus');
-                
+
                 // Clear previous status
                 formStatus.textContent = '';
-                
+
                 // Validate form
                 const validationError = validateForm(this);
                 if (validationError) {
@@ -242,11 +242,11 @@ fetch('Footer.html')
                     formStatus.style.color = '#f8d7da';
                     return;
                 }
-                
+
                 // Update button state
                 sendButton.disabled = true;
                 sendButton.textContent = 'Sending...';
-                
+
                 // Prepare email parameters
                 const templateParams = {
                     to_email: 'vaultarista@gmail.com',
@@ -255,17 +255,17 @@ fetch('Footer.html')
                     subject: this.querySelector('input[name="subject"]').value || 'Contact Form Message',
                     message: this.querySelector('textarea[name="message"]').value
                 };
-                
+
                 // Send the email
                 emailjs.send('service_v6dco15', 'template_48ltn9r', templateParams)
-                    .then(function() {
+                    .then(function () {
                         sendButton.disabled = false;
                         sendButton.textContent = 'Send Message';
                         formStatus.textContent = 'Your message has been sent successfully!';
                         formStatus.style.color = '#66cc00';
                         contactForm.reset();
                     })
-                    .catch(function(error) {
+                    .catch(function (error) {
                         sendButton.disabled = false;
                         sendButton.textContent = 'Send Message';
                         formStatus.textContent = 'Error sending message. Please try again.';
@@ -275,30 +275,30 @@ fetch('Footer.html')
             });
         }
     }
-    
-    
+
+
     const lazyLoadImages = () => {
-        
+
         if (slider) {
             const viewportWidth = window.innerWidth;
             if (viewportWidth < 768) {
-                
+
                 slider.style.height = '289px';
             } else {
                 slider.style.height = 'auto';
             }
         }
     };
-    
+
     // Initial call and window resize event
     lazyLoadImages();
     window.addEventListener('resize', lazyLoadImages);
-    
+
     // Fix for product cards on small screens
     const adjustProductCards = () => {
         const productCards = document.querySelectorAll('.product-card');
         const viewportWidth = window.innerWidth;
-        
+
         productCards.forEach(card => {
             const image = card.querySelector('.product-image');
             if (image) {
@@ -312,7 +312,7 @@ fetch('Footer.html')
             }
         });
     };
-    
+
     // Initial call and window resize event
     adjustProductCards();
     window.addEventListener('resize', adjustProductCards);

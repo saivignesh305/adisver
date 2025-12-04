@@ -6,17 +6,22 @@
     --dark: #343a40;
     --white: #ffffff;
     --gray: #6c757d;
+    --hero-bg: #0069a1;
+
 }
 
+/* -------------------------
+   Base
+   ------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 body {
-    background-color: var(--light);
+    background: var(--light);
     color: var(--dark);
     line-height: 1.6;
 }
@@ -32,10 +37,12 @@ p {
     text-align: justify;
 }
 
-/**** Header Styles ****/
+/* -------------------------
+   Header & Navigation
+   ------------------------- */
 header {
-    background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -45,7 +52,7 @@ header {
 .header-container {
     display: flex;
     justify-content: space-between;
-    align-items: center !important;
+    align-items: center;
     padding: 0;
 }
 
@@ -58,16 +65,14 @@ header {
     width: 40px;
     height: 40px;
     margin-right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
 }
 
 .logo h1 {
     font-size: 28px;
     font-weight: 700;
     color: var(--primary);
-    margin: 0 !important;
+    margin: 0;
 }
 
 .logo span {
@@ -81,7 +86,8 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    margin: 0 !important;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -93,7 +99,7 @@ nav ul li a {
     color: var(--dark);
     font-weight: 500;
     font-size: 16px;
-    transition: color 0.3s;
+    transition: color .3s;
     position: relative;
 }
 
@@ -102,17 +108,18 @@ nav ul li a:hover {
 }
 
 nav ul li a:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 0;
     height: 2px;
     background: var(--primary);
     left: 0;
     bottom: -5px;
-    transition: width 0.3s;
+    transition: width .3s;
 }
 
-nav ul li a:hover:after {
+nav ul li a:hover:after,
+nav ul li a.active:after {
     width: 100%;
 }
 
@@ -124,14 +131,18 @@ nav ul li a:hover:after {
     outline: none;
 }
 
+/* small hidden logo used in mobile menu */
+.logo1 {
+    display: none;
+}
 
-
+/* -------------------------
+   Hero
+   ------------------------- */
 .hero {
-    background: url("../img/bg-hero.png") center center no-repeat;
-    background-color: #0069a1;
-    background-size: cover;
+    background: url("../img/bg-hero.png") center/cover no-repeat;
+    background-color: var(--hero-bg);
     color: var(--white);
-
 }
 
 .image-container {
@@ -142,23 +153,20 @@ nav ul li a:hover:after {
 .image-container img {
     max-width: 90%;
     height: auto;
+    display: block;
 }
 
-.hero-image {
-    flex: 1;
-    text-align: right;
-    padding: 20px;
-}
-
+/* optional hero image set used elsewhere */
 .hero-image img {
     max-width: 90%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .2);
     padding: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, .1);
 }
 
+/* headings in hero */
 .hero h2 {
     font-size: 48px;
     margin-bottom: 20px;
@@ -176,22 +184,24 @@ nav ul li a:hover:after {
     margin-bottom: 40px;
 }
 
-
+/* -------------------------
+   Section title
+   ------------------------- */
 .section-title {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 60px
 }
 
 .section-title h3 {
     font-size: 36px;
     color: var(--primary);
-    margin-bottom: 15px;
     position: relative;
     display: inline-block;
+    margin-bottom: 15px;
 }
 
 .section-title h3:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 50px;
     height: 3px;
@@ -202,21 +212,19 @@ nav ul li a:hover:after {
 }
 
 .section-title p {
-    text-align: center;
     font-size: 18px;
     color: var(--gray);
     max-width: 700px;
     margin: 20px auto 0;
 }
 
-
-
-/* The intro section and the aiot section */
-
+/* -------------------------
+   Intro / AIoT Sections
+   ------------------------- */
 .intro,
 .aiot {
     padding: 100px 0;
-    background-color: var(--white);
+    background: var(--white);
 }
 
 .intro-content,
@@ -250,18 +258,18 @@ nav ul li a:hover:after {
 .intro-image,
 .aiot-image {
     flex: 1;
-    border: none;
     overflow: hidden;
     padding: 10px;
+    border: none;
 }
 
 .intro-image img,
 .aiot-image img {
     width: 100%;
-    border: none;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
+    border: none;
 }
 
 .intro-image img:hover,
@@ -269,11 +277,12 @@ nav ul li a:hover:after {
     transform: scale(1.02);
 }
 
-
-/**** iot Section ****/
+/* -------------------------
+   IoT Section
+   ------------------------- */
 .iot {
     padding: 100px 0;
-    background-color: var(--light);
+    background: var(--light);
 }
 
 .iot-content {
@@ -302,29 +311,29 @@ nav ul li a:hover:after {
 
 .iot-image {
     flex: 1;
-    border: none;
     overflow: hidden;
     padding: 10px;
+    border: none;
 }
 
 .iot-image img {
     width: 100%;
-    border: none;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
+    border: none;
 }
 
 .iot-image img:hover {
     transform: scale(1.02);
 }
 
-
-
-/**** embedded  ****/
+/* -------------------------
+   Embedded Section
+   ------------------------- */
 .embedded {
     padding: 100px 0;
-    background-color: var(--light);
+    background: var(--light);
 }
 
 .embedded-content {
@@ -353,86 +362,33 @@ nav ul li a:hover:after {
 
 .embedded-image {
     flex: 1;
-    border: none;
     overflow: hidden;
     padding: 10px;
+    border: none;
 }
 
 .embedded-image img {
     width: 100%;
-    border: none;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
+    border: none;
 }
 
 .embedded-image img:hover {
     transform: scale(1.02);
 }
 
-
-.logo1 {
-    display: none;
-}
-
-
-/* Media Queries - Consolidated */
-
-
-/* Responsive Breakpoints */
-@media (max-width: 1199px) {
-    .hero h2 {
-        font-size: 42px;
-        line-height: 1.3;
-    }
-
-    .hero-text p {
-        font-size: 18px;
-    }
-
-    .about-content,
-    .choose-content {
-        gap: 30px;
-    }
-}
-
-/* Tablet and Medium Screens */
-@media (max-width: 991px) {
-    .hero-content {
-        flex-direction: column;
-        padding-top: 90px;
-        padding-bottom: 30px;
-    }
-
-    .section-title h3 {
-        font-size: 32px;
-    }
-
-    .section-title p {
-        font-size: 16px;
-    }
-
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h2 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-}
-
-/* Mobile Screens */
-@media (max-width: 768px) {
+/* -------------------------
+   Mobile Navigation & overlay
+   ------------------------- */
+@media (max-width:768px) {
     .logo1 {
         display: flex;
         align-items: center;
         padding: 1.2rem 3.5rem;
         margin-bottom: 15px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
     }
 
     .logo1 img {
@@ -459,28 +415,25 @@ nav ul li a:hover:after {
         left: -100%;
         width: 70%;
         height: 100vh;
-        background-color: var(--white);
+        background: var(--white);
         flex-direction: column;
         padding: 0;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
         z-index: 999;
         overflow-y: auto;
-        transition: left 0.3s ease;
-        /* Smooth transition for opening/closing */
+        transition: left .3s ease;
     }
 
     nav ul.active {
         display: flex;
         left: 0;
-        /* Show the menu by bringing it on-screen */
-
     }
 
     nav ul li {
         margin: 0;
         padding: 15px 30px;
         width: 100%;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid rgba(0, 0, 0, .05);
     }
 
     nav ul li:last-child {
@@ -489,23 +442,21 @@ nav ul li a:hover:after {
 
     nav ul li a {
         font-size: 18px;
-
         width: 100%;
     }
 
-    /* Add semi-transparent overlay behind menu */
     body::after {
-        content: '';
+        content: "";
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, .5);
         z-index: 998;
         visibility: hidden;
         opacity: 0;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
+        transition: opacity .3s, visibility .3s;
     }
 
     body.menu-open::after {
@@ -513,7 +464,6 @@ nav ul li a:hover:after {
         opacity: 1;
     }
 
-    /* Adjust the header for mobile */
     .header-container {
         padding: 0;
         justify-content: left;
@@ -530,7 +480,6 @@ nav ul li a:hover:after {
         z-index: 1001;
     }
 
-
     .hero {
         padding: 120px 0 60px;
     }
@@ -546,100 +495,89 @@ nav ul li a:hover:after {
         margin-bottom: 30px;
     }
 
-
-    .btn-outline {
-        margin-left: 0;
-    }
-
-    .section-title {
-        margin-bottom: 40px;
-    }
-
-    .section-title h3 {
-        font-size: 28px;
-    }
-
-    .row {
-        flex-direction: column;
-    }
-
-    .contact-image {
-        display: none;
-        /* Hide on smaller screens */
-    }
-
-    .contact-text {
-        width: 100%;
-    }
-
-    .contact-form {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    .footer-content {
-        gap: 30px;
-    }
-
-    .iot-content,
-    .aiot-content,
     .intro-content,
+    .aiot-content,
+    .iot-content,
     .embedded-content {
         flex-direction: column;
         gap: 20px;
     }
 
-    .iot-text,
-    .aiot-text,
+    .intro-content,
+    .aiot-content {
+        flex-direction: column-reverse;
+    }
+
+    /* reverse order on mobile */
+
     .intro-text,
+    .aiot-text,
+    .iot-text,
     .embedded-text,
-    .iot-image,
-    .aiot-image,
     .intro-image,
+    .aiot-image,
+    .iot-image,
     .embedded-image {
         width: 100%;
         text-align: center;
     }
 
-    /* Reverse order for mobile */
-    .intro-content,
-    .aiot-content{
-        flex-direction: column-reverse;
-    }
-
-    .iot-text h4,
-    .aiot-text h4,
-    .intro-text h4,
-    .embedded-text h4 {
-        font-size: 22px;
-    }
-
     .iot,
     .aiot,
     .intro,
-    .embedded{
+    .embedded {
         padding: 30px 15px;
-    }
-
-    .footer-content>div {
-        flex: 100%;
-        margin-bottom: 30px;
     }
 }
 
-/* Small Mobile Screens */
-@media (max-width: 576px) {
+/* -------------------------
+   Tablet & smaller desktops
+   ------------------------- */
+@media (max-width:991px) {
+    .hero-content {
+        flex-direction: column;
+        padding-top: 90px;
+        padding-bottom: 30px;
+    }
 
-    /* Tighter spacing for very small screens */
+    .section-title h3 {
+        font-size: 32px;
+    }
+
+    .section-title p {
+        font-size: 16px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
+
+/* -------------------------
+   Mid-size screens
+   ------------------------- */
+@media (max-width:1199px) {
+    .hero h2 {
+        font-size: 42px;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
+
+/* -------------------------
+   Small phones
+   ------------------------- */
+@media (max-width:576px) {
     .container {
         padding-left: 1rem;
         padding-right: 1rem;
-    }
-
-    .header-container {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
     }
 
     .hero {
@@ -650,45 +588,25 @@ nav ul li a:hover:after {
         font-size: 28px;
     }
 
-    .hero-buttons {
-        flex-direction: row;
-        margin-left: 10px;
-        gap: 20px;
-    }
-
     .section-title h3 {
         font-size: 26px;
     }
 
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-
-    /* Button sizes */
     .btn,
     .btn-read,
     .exp {
         padding: 10px 30px;
-
-    }
-
-    .contact-text h1 {
-        font-size: 26px;
-    }
-
-    .form-control,
-    .message {
-        padding: 10px;
     }
 }
 
-/* iOS-specific fixes */
-@supports (-webkit-touch-callout: none) {
+/* -------------------------
+   iOS fixes (prevent auto-zoom on inputs)
+   ------------------------- */
+@supports (-webkit-touch-callout:none) {
 
     input,
     textarea {
         font-size: 16px !important;
-        /* Prevents zoom on iOS */
     }
 
     .form-control:focus {
@@ -696,25 +614,27 @@ nav ul li a:hover:after {
     }
 }
 
-/* Contact section padding fix */
-@media (min-width: 992px) {
+/* -------------------------
+   Contact section padding adjustments for wide screens
+   ------------------------- */
+@media (min-width:992px) {
     .contact .container {
         max-width: 100%;
     }
 
     .contact .contact-text {
-        padding-right: calc(((100% - 960px) / 2) + 0.75rem);
+        padding-right: calc(((100% - 960px)/2) + .75rem);
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width:1200px) {
     .contact .contact-text {
-        padding-right: calc(((100% - 1140px) / 2) + 0.75rem);
+        padding-right: calc(((100% - 1140px)/2) + .75rem);
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width:1400px) {
     .contact .contact-text {
-        padding-right: calc(((100% - 1320px) / 2) + 0.75rem);
+        padding-right: calc(((100% - 1320px)/2) + .75rem);
     }
 }

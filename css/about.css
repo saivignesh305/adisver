@@ -41,7 +41,7 @@ p {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   margin-bottom: 15px;
 }
 
@@ -698,8 +698,7 @@ footer {
     font-size: 18px;
   }
   
-  .about-content, 
-  .choose-content {
+  .about-content{
     gap: 30px;
   }
 }
@@ -707,7 +706,6 @@ footer {
 @media (max-width: 991px) {
   .hero-content, 
   .about-content,
-  .choose-content,
   .story-content,
   .vision-content {
     flex-direction: column;
@@ -720,12 +718,10 @@ footer {
   }
   
   .hero-text, 
-  .choose-text,
   .story-text,
   .vision-text,
   .hero-image,
   .about-image,
-  .choose-image,
   .story-image,
   .vision-image {
     max-width: 100%;
@@ -922,9 +918,7 @@ footer {
   }
 
   .about, 
-  .choose, 
-  .products, 
-  .technology, 
+  .products,
   .contact {
     padding: 0.9rem;
   }

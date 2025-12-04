@@ -445,13 +445,7 @@ nav ul li a:hover:after {
     border: none;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
 }
-
-.ai-image img:hover {
-    transform: scale(1.02);
-}
-
 
 /**** cognitive ****/
 
@@ -496,12 +490,8 @@ nav ul li a:hover:after {
     border: none;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
 }
 
-.cognitive-image img:hover {
-    transform: scale(1.02);
-}
 
 /**** machine learing ****/
 
@@ -546,13 +536,7 @@ nav ul li a:hover:after {
     border: none;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
 }
-
-.ml-image img:hover {
-    transform: scale(1.02);
-}
-
 
 /*** team group ***/
 /*
@@ -787,10 +771,6 @@ textarea.form-control {
         font-size: 18px;
     }
     
-    .about-content, 
-    .choose-content {
-        gap: 30px;
-    }
 }
 
 /* Tablet and Medium Screens */
@@ -801,16 +781,6 @@ textarea.form-control {
         padding-bottom: 30px;
     }
     
-    .about-content,
-    .choose-content {
-        flex-direction: column;
-    }
-    
-    .choose-image, 
-    .about-image {
-        max-width: 100%;
-        order: -1; /* Move image above text on mobile */
-    }
     
     .tech-cards {
         flex-direction: column;
@@ -968,8 +938,6 @@ textarea.form-control {
         margin-left: 0;
     }
     
-    .about,
-    .choose,
     .products,
     .technology,
     .contact {

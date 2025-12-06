@@ -6,7 +6,6 @@
     --dark: #343a40;
     --white: #ffffff;
     --gray: #6c757d;
-    --footer-bg: #0f1e2d;
     --hero-bg: #0069a1;
     --transparent-white: rgba(255, 255, 255, 0.1);
     --transparent-white-more: rgba(255, 255, 255, 0.297);
@@ -212,13 +211,8 @@ nav ul li a:after {
     transition: width .3s;
 }
 
-nav ul li a:hover:after,
-nav ul li a.active:after {
+nav ul li a:hover:after{
     width: 100%;
-}
-
-nav ul li a.active {
-    color: var(--primary);
 }
 
 .mobile-nav-toggle {
@@ -497,162 +491,6 @@ textarea.form-control {
     font-size: 14px;
 }
 
-/* ------------------------
-   Footer
-   ------------------------ */
-footer {
-    background: url(../img/footer.png) center/cover no-repeat;
-    background-color: var(--footer-bg);
-    color: var(--white);
-    padding: 0 15px;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 50px;
-    margin-bottom: 50px;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.footer-logo-img {
-    width: 45px;
-    height: 45px;
-    margin-right: 12px;
-    background-color: var(--primary);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--white);
-    font-size: 22px;
-    padding: 5px;
-}
-
-.footer-logo h3 {
-    font-size: 24px;
-    color: var(--white);
-}
-
-.footer-logo span {
-    color: var(--accent);
-}
-
-.footer-about p,
-.footer-links ul li a,
-.footer-contact p,
-.footer-newsletter p {
-    color: #aaa;
-    margin-bottom: 20px;
-}
-
-.social-links {
-    display: flex;
-}
-
-.social-link {
-    width: 45px;
-    height: 45px;
-    background: #ffffff1a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-right: 12px;
-    color: var(--white);
-    text-decoration: none;
-    transition: all .3s;
-    font-size: 18px;
-}
-
-.social-link:hover {
-    background: var(--primary);
-    transform: translateY(-3px);
-}
-
-.footer-links h3,
-.footer-contact h3,
-.footer-newsletter h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: var(--white);
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin-bottom: 10px;
-}
-
-.footer-links ul li a {
-    color: #aaa;
-    text-decoration: none;
-    transition: color .3s;
-}
-
-.footer-links ul li a:hover {
-    color: var(--primary);
-}
-
-.footer-contact p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    color: #aaa;
-}
-
-.footer-contact p i {
-    margin-right: 10px;
-    color: var(--primary);
-    font-size: 18px;
-}
-
-.newsletter-form {
-    display: flex;
-}
-
-.newsletter-input {
-    flex: 1;
-    padding: 12px;
-    border: none;
-    border-radius: 5px 0 0 5px;
-    font-size: 14px;
-    color: var(--dark);
-}
-
-.newsletter-input:focus {
-    outline: none;
-    background: #d2cfcf;
-}
-
-.newsletter-btn {
-    background: var(--primary);
-    color: var(--white);
-    border: none;
-    padding: 0 20px;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-}
-
-.newsletter-btn:hover {
-    background: var(--secondary);
-}
-
-.footer-bottom {
-    border-top: 1px solid #ffffff1a;
-    padding-top: 30px;
-    text-align: center;
-    color: #aaa;
-    font-size: 14px;
-}
 
 /* Hidden logo used in mobile nav */
 .logo1 {
@@ -901,18 +739,14 @@ footer {
         margin: 0 auto;
     }
 
-    .footer-content {
-        gap: 30px;
-    }
+
 
     .detail-card {
         flex: 1 1 100%;
         max-width: 100%;
     }
 
-    .footer-content>div {
-        flex: 1 1 100%;
-    }
+
 
     .section-title h3 {
         text-align: center;
@@ -944,9 +778,7 @@ footer {
         font-size: 22px;
     }
 
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
+
 
     .btn,
     .btn-read,

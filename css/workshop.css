@@ -30,7 +30,7 @@ body {
     width: 100%;
     max-width: 80rem;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1rem;
 }
 
 p {
@@ -118,8 +118,7 @@ nav ul li a:after {
     transition: width .3s;
 }
 
-nav ul li a:hover:after,
-nav ul li a.active:after {
+nav ul li a:hover:after{
     width: 100%;
 }
 

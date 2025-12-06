@@ -112,15 +112,16 @@ textarea.form-control {
     .row {
         flex-direction: column;
     }
-    
+
     .contact-image {
-        display: none; /* Hide on smaller screens */
+        display: none;
+        /* Hide on smaller screens */
     }
-    
+
     .contact-text {
         width: 100%;
     }
-    
+
     .contact-form {
         width: 100%;
         max-width: 400px;
@@ -136,19 +137,22 @@ textarea.form-control {
     .contact-text h1 {
         font-size: 26px;
     }
-    
-    .form-control, .message {
+
+    .form-control,
+    .message {
         padding: 10px;
     }
 }
 
 /* iOS-specific fixes */
 @supports (-webkit-touch-callout: none) {
-    input, 
+
+    input,
     textarea {
-        font-size: 16px !important; /* Prevents zoom on iOS */
+        font-size: 16px !important;
+        /* Prevents zoom on iOS */
     }
-    
+
     .form-control:focus {
         font-size: 16px !important;
     }

@@ -8,14 +8,17 @@
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: var(--primary); /* Match theme color */
+    color: var(--primary);
+    /* Match theme color */
     z-index: 1001;
-    margin-right: 15px; /* Add space between icon and logo */
+    margin-right: 15px;
+    /* Add space between icon and logo */
 }
 
 /* Mobile menu header styling to match theme */
 .mobile-menu-header {
-    background-color: var(--primary); /* Change to primary theme color */
+    background-color: var(--primary);
+    /* Change to primary theme color */
     padding: 16px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -29,7 +32,8 @@
         left: -100%;
         width: 80%;
         height: 100vh;
-        background-color: var(--primary); /* Match theme color */
+        background-color: var(--primary);
+        /* Match theme color */
         flex-direction: column;
         padding: 0;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -37,19 +41,19 @@
         overflow-y: auto;
         transition: left 0.3s ease;
     }
-    
+
     /* Fix header container layout for mobile */
     .header-container {
         padding: 0 1rem;
         display: flex;
         align-items: center;
     }
-    
+
     /* Add space between mobile nav toggle and logo */
     .logo {
         margin-left: 10px;
     }
-    
+
     /* Ensure navigation links have consistent styling */
     nav ul li a {
         font-size: 16px;
@@ -58,17 +62,17 @@
         align-items: center;
         width: 100%;
     }
-    
+
     /* Active link styling for mobile */
     nav ul li a.active {
         color: var(--accent);
     }
-    
+
     /* Fix hover state for mobile navigation */
     nav ul li a:hover {
         color: var(--accent);
     }
-    
+
     /* Fix mobile menu link borders */
     nav ul li {
         margin: 0;

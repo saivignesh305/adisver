@@ -104,11 +104,11 @@ h6 {
 }
 
 .section-title h3 {
-    font-size: 36px;
+    font-size: 50px;
     color: var(--primary);
     position: relative;
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 
 .section-title h3:after {

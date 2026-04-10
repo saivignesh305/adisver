@@ -120,7 +120,7 @@ nav ul li a:after {
     transition: width 0.3s;
 }
 
-nav ul li a:hover:after{
+nav ul li a:hover:after {
     width: 100%;
 }
 
@@ -259,9 +259,12 @@ nav ul li a:hover:after{
 
 /**** Common Section Styles ****/
 .about,
-.products,
 .technology {
     padding: 9.7rem 0;
+}
+
+.products{
+    padding-top: 9.7rem;
 }
 
 .about,
@@ -488,6 +491,138 @@ nav ul li a:hover:after{
 
 .logo1 {
     display: none;
+}
+
+
+/**** Cow Dashboard Section ****/
+
+.cow-dashboard {
+    padding: 100px 0;
+    background-color: var(--light);
+}
+
+.cow-dashboard-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.cow-dashboard-text {
+    flex: 1;
+}
+
+.cow-dashboard-title {
+    margin-bottom: 25px;
+}
+
+.cow-dashboard-title h3 {
+    font-size: 36px;
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+}
+
+.cow-dashboard-title h3::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+/* TEXT */
+.cow-dashboard-text p {
+    color: var(--gray);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* IMAGE CONTAINER */
+.cow-dashboard-image-container {
+    flex: 1;
+    background: #f0f0f0;
+    border-radius: 20px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.cow-dashboard-image-container:hover {
+    transform: translateY(-5px);
+}
+
+.cow-dashboard-image-container img {
+    width: 100%;
+    height: 550px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+
+/**** Cow Insight Section ****/
+
+.cow-insight {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.cow-insight-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* TEXT */
+.cow-insight-text {
+    flex: 1;
+}
+
+.cow-insight-title {
+    margin-bottom: 25px;
+}
+
+.cow-insight-title h3 {
+    font-size: 36px;
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+}
+
+.cow-insight-title h3::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.cow-insight-text p {
+    color: var(--gray);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* IMAGE CONTAINER */
+.cow-insight-image-container {
+    flex: 1;
+    background: #f0f0f0;
+    border-radius: 20px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.cow-insight-image-container:hover {
+    transform: translateY(-5px);
+}
+
+.cow-insight-image-container img {
+    width: 100%;
+    height: 550px;
+    object-fit: contain;
+    border-radius: 12px;
 }
 
 /*mobile optim*/

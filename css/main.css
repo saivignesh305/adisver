@@ -528,7 +528,7 @@ nav ul li a:hover:after {
     height: 3px;
     background: var(--accent);
     position: absolute;
-    left: 0;
+    left: 40%;
     bottom: -10px;
 }
 
@@ -595,7 +595,7 @@ nav ul li a:hover:after {
     height: 3px;
     background: var(--accent);
     position: absolute;
-    left: 0;
+    left: 40%;
     bottom: -10px;
 }
 

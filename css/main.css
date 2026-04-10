@@ -261,7 +261,7 @@ nav ul li a:hover:after {
 .about,
 .products,
 .technology {
-    padding: 9.7rem 0;
+    padding: 8rem 0;
 }
 
 .about,
@@ -503,18 +503,17 @@ nav ul li a:hover:after {
 
 .paushtika-image {
     overflow: hidden;
-    padding: 15px 15px 0 15px;
 }
 
 .paushtika-image img {
     width: 100%;
-    height: 100%;
+    height: 700px;
     object-fit: contain;
     border-radius: 10px;
 }
 
 .cow-dashboard {
-    padding: 100px 0;
+    padding: 6rem 0;
     background-color: var(--light);
 }
 
@@ -558,28 +557,22 @@ nav ul li a:hover:after {
 
 /* IMAGE CONTAINER */
 .cow-dashboard-image-container {
-    flex: 1.5;
+    flex: 1.2;
     border-radius: 20px;
-    padding: 15px;
-    transition: all 0.3s ease;
-}
-
-.cow-dashboard-image-container:hover {
-    transform: translateY(-5px);
 }
 
 .cow-dashboard-image-container img {
     width: 100%;
-    height: 480px;
+    height: auto;
     object-fit: contain;
-    border-radius: 12px;
+    border-radius: 20px;
 }
 
 
 /**** Cow Insight Section ****/
 
 .cow-insight {
-    padding: 100px 0;
+    padding: 5rem 0;
     background-color: var(--white);
 }
 
@@ -623,24 +616,58 @@ nav ul li a:hover:after {
 
 /* IMAGE CONTAINER */
 .cow-insight-image-container {
-    flex: 1.5;
+    flex: 1.2;
     border-radius: 20px;
-    padding: 15px;
-    transition: all 0.3s ease;
-}
-
-.cow-insight-image-container:hover {
-    transform: translateY(-5px);
 }
 
 .cow-insight-image-container img {
     width: 100%;
-    height: 480px;
+    height: auto;
     object-fit: contain;
-    border-radius: 12px;
+    border-radius: 20px;
 }
 
 /*mobile optim*/
+
+
+@media (max-width: 768px) {
+
+    .paushtika {
+        padding: 40px 0;
+    }
+
+    .section-title h3 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .section-title p {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .paushtika-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .paushtika-image {
+        padding: 0;
+    }
+
+    .paushtika-image img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 0; /* full-width clean look */
+    }
+}
+
+
+
 @media (max-width: 1199px) {
     .hero h2 {
         font-size: 42px;

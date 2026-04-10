@@ -982,6 +982,97 @@ nav ul li a:hover:after {
 }
 
 
+/*mobile optim for paushtika dashboard */
+
+@media (max-width: 768px) {
+
+    /* ===== COW DASHBOARD ===== */
+    .cow-dashboard {
+        padding: 60px 0;
+    }
+
+    .cow-dashboard-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .cow-dashboard-title h3 {
+        font-size: 26px;
+    }
+
+    .cow-dashboard-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .cow-dashboard-image-container {
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .cow-dashboard-image-container img {
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+    }
+
+
+    /* ===== COW INSIGHT ===== */
+    .cow-insight {
+        padding: 60px 0;
+    }
+
+    .cow-insight-content {
+        flex-direction: column-reverse;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .cow-insight-title h3 {
+        font-size: 26px;
+    }
+
+    .cow-insight-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .cow-insight-image-container {
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .cow-insight-image-container img {
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .cow-dashboard-title h3,
+    .cow-insight-title h3 {
+        font-size: 22px;
+    }
+
+    .cow-dashboard-text p,
+    .cow-insight-text p {
+        font-size: 0.9rem;
+    }
+
+    .cow-dashboard-image-container img,
+    .cow-insight-image-container img {
+        max-height: 250px;
+    }
+}
+
+
+
+
+
 @supports (-webkit-touch-callout: none) {
 
     input,
